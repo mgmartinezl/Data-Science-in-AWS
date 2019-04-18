@@ -21,7 +21,7 @@ Approximately by 2016, the _data scientist_ position was considered as the "sexi
 
 As a consequence, data science is the extension of the scientific method applied to data in almost all fields of knowledge. From movies recommendations, fraud detection and financial risk prediction to preventive maintenance, data science has appeared to help us transform data into useful information, which in the end means increased wisdom. The following chart presents some key opportunities that data science offers to many of companies' current challenges:
 
-![DS](https://github.com/mgmartinezl/Research-topic/DataScience-UseCases.png)
+![DS](https://github.com/mgmartinezl/Research-topic/blob/master/DataScience-UseCases.png)
 Taken from: https://www.edureka.co/blog/what-is-data-science/
 
 Therefore, tech leader companies around the world have been working hard on the democratization of this concept, so that many other businesses and corporations can benefit themselves by making better decisions through data.
