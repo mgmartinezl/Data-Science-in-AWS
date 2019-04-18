@@ -1,7 +1,7 @@
 # Research-topic: Services for data science at AWS
 
 Written by:  
-**Jose Carlos Badillo Puebla**   
+**Jose Carlos Badillo**   
 **Gabriela Martinez**  
 
 ## Introduction: what is *_data science_* and why is it important?
