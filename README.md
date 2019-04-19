@@ -106,6 +106,10 @@ Moreover, the Amazon Elasticsearch Service works as shown below, offering a bunc
 ![Elastic](https://github.com/mgmartinezl/Research-topic/blob/master/AWS-Elasticsearch.png)
 
 #### 1.3.5. Visualization
+* [Amazon Quicksight](https://aws.amazon.com/quicksight/?nc2=h_m1) is AWS business intelligence scalable tool that allows presenting insights up to a 10.000 users simultaneously. Through this tool, it is possible to create and publish dashboards not only with descriptive information but also with machine learning capabilities. Moreover, dashboards can be accessed from any device and can be embedded into different applications. In particular, this solution offers a Pay-per-Session pricing schema that allows giving access
+to everyone to the data they need, while only paying for what they use. This service works as described in the following graph:
+
+![Quicksight](https://github.com/mgmartinezl/Research-topic/blob/master/Amazon-Quicksight.png)
 
 ### 1.4. Machine learning
 
