@@ -62,7 +62,19 @@ Using AWS services for analytics or machine learning, requires first having the 
 
 ![Kinesis](https://github.com/mgmartinezl/Research-topic/blob/master/Amazon-Kinesis.png)
 
+* [AWS IoT Core](https://aws.amazon.com/iot-core/?nc2=h_iot) is aanother real-time data capturing solution that focuses on Internet of Things devices data. This tool can connect billions of devices between them and also to other external endpoints or devices that use additional AWS services, such as AWS Lambda, Amazon Kinesis, Amazon S3, Amazon SageMaker, Amazon DynamoDB, Amazon CloudWatch, AWS CloudTrail, and Amazon QuickSight. Additionally, these apps can track the connected devices 100% of the time, even if they are not connected because the app _"stores the latest state of a connected device so that it can be read or set at anytime, making the device appear to your applications as if it were online all the time"_. The logic behind this concept is as shown:
+
+**First, connect devices: **  
+![Connect](https://github.com/mgmartinezl/Research-topic/blob/master/AWS-IoT-connect.png)
+
+**Second, secure connections and data: **  
+![Secure](https://github.com/mgmartinezl/Research-topic/blob/master/AWS-IoT-secure.png)
+
+**Third, process collected data: ** according to predefined business rules:  
+![Process](https://github.com/mgmartinezl/Research-topic/blob/master/AWS-IoT-process.png)
+
 ### 1.2. Data lakes
+
 
 #### 1.2.1. Object storage
 
