@@ -73,23 +73,27 @@ Using AWS services for analytics or machine learning, requires first having the 
 **Third, process collected data** according to predefined business rules:
 ![Process](https://github.com/mgmartinezl/Research-topic/blob/master/AWS-IoT-process.png)
 
-### 1.2. Data lakes
+### 1.2. Data lakes (Charlie)
 
-#### 1.2.1. Object storage
+#### 1.2.1. Object storage (Charlie)
 
-#### 1.2.2. Backup and archive
+#### 1.2.2. Backup and archive (Charlie)
 
-#### 1.2.3. Data catalog
+#### 1.2.3. Data catalog (Charlie)
 
 ### 1.3. Analytics
 
 #### 1.3.1. Interactive analytics
+* [Amazon Athena](https://aws.amazon.com/athena/) is a platform to query data stored in Amazon S3 through standard SQL, once a schema has been defined. Moreover, Athena is a serverless tool, so no infrastructure costs are associated with the use of the service and it only charges final users for the queries they run. Besides this, no ETL processes need to be defined prior to start querying data. Also, Amazon Athena is integrated with AWS Glue Data Catalog, which allows users create unified metadata repositories available across all the Amazon suite of products and also schema versioning
 
 #### 1.3.2. Big data processing
+* [Amazon EMR](https://aws.amazon.com/emr/) provides big data processing capabilities by enabling the use of frameworks such as Spark and MapReduce and more than 19 open source projects that include Presto, Hive, HBase and Flink, which can also be connected to Amazon S3 or DynamoDB. Amazon EMR operates through notebooks based on the Jupyter interface and allows users create ad hoc queries, exploratory analysis, ETLs, machine learning, log analysis, web indexing amongst others.
 
 #### 1.3.3. Data warehousing
+* On the traditional OLAP side, data warehousing querying is also possible thanks to [Amazon Redshift](https://aws.amazon.com/redshift/), the tool for building scalable data warehouses that can access petabytes of data. Moreover, according to the official documentation _"Redshift delivers ten times faster performance than other data warehouses by using machine learning, massively parallel query execution, and columnar storage on high-performance disk"_ and additionally, it costs _"less than 1/10th the cost of traditional data warehouses on-premises"_, with prices that start at $0.25 per hour.
 
 #### 1.3.4. Real-time analytics
+* As mentioned before, [Amazon Kinesis](https://aws.amazon.com/kinesis/?nc2=h_m1) enables the collection, processing and further analysis of streaming data that includes Internet of Things telemetry data, logs generated from applications running and streams from clicks on websites.
 
 #### 1.3.5. Operational analytics
 
@@ -97,4 +101,12 @@ Using AWS services for analytics or machine learning, requires first having the 
 
 ### 1.4. Machine learning
 
+#### 1.4.1. Frameworks and interfaces
+
+#### 1.4.2. Platform services
+
+#### 1.4.3. Application services
+
 ## 2. Artificial intelligence on top of AWS
+
+
