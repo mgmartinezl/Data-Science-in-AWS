@@ -100,10 +100,10 @@ Using AWS services for analytics or machine learning, requires first having the 
 
    * **Built on top of Lucene,** which offers powerful full-text search capabilities.
    * **Document-oriented:** storing is made through structured Json documents in which all fields are indexed by default. This results in a higher performance when searching.
-   * **Supports full-text search through its inverted index.** According to the [official documentation](https://www.elastic.co/guide/en/elasticsearch/guide/current/inverted-index.html) _"an inverted index consists of a list of all the unique words that appear in any document, and for each word, a list of the documents in which it appears"_.
+   * **Supports extremely fast full-text search through its inverted index.** According to the [official documentation](https://www.elastic.co/guide/en/elasticsearch/guide/current/inverted-index.html) _"an inverted index consists of a list of all the unique words that appear in any document, and for each word, a list of the documents in which it appears"_.
    * **Restful API** that allows querying Elasticsearch while providing a user interface.
-
-In a nutshell, the Amazon Elasticsearch Service works as shown below:
+   
+Moreover, the Amazon Elasticsearch Service works as shown below, offering a bunch of different analytical services on top of Elasticsearch besides its main capability associated with full-text search:
 ![Elastic](https://github.com/mgmartinezl/Research-topic/blob/master/AWS-Elasticsearch.png)
 
 #### 1.3.5. Visualization
