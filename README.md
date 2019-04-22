@@ -21,7 +21,7 @@ Approximately by 2016, the _data scientist_ position was considered as the "sexi
 
 As a consequence, data science is the extension of the scientific method applied to data in almost all fields of knowledge. From movies recommendations, fraud detection and financial risk prediction to preventive maintenance, data science has appeared to help us transform data into useful information, which in the end means increased wisdom. The following chart presents some key opportunities that data science offers to many of companies' current challenges:
   
-![DS](https://github.com/mgmartinezl/Research-topic/blob/master/DataScience-UseCases.png)  
+![DS](./Images/DataScience-UseCases.png)  
 [Taken from: [2]](https://www.edureka.co/blog/what-is-data-science/)
 
 Therefore, as may be expected, tech leader companies around the world have been working hard on the democratization of this concept, so that many other businesses and corporations can benefit themselves by making better decisions through data. In fact, data science is a business in which useful knowledge is sold as the most valuable product, something that most companies are willing to pay, as we are now aware of the fact that wrong decisions cost much more in the long term. [See more at [3]](https://www.forbes.com/sites/falonfatemi/2016/09/28/the-true-cost-of-a-bad-hire-its-more-than-you-think/#421ce09d4aa4)
@@ -38,7 +38,7 @@ Amazon Web Services is a whole ecosystem hosted by Amazon Inc. that offers on-de
 
 AWS offers a set of services that allow companies create an environment that is able to process heterogeneous data and apply machine learning or analytics on it, as shown in the following schema:
 
-![AWSStack](https://github.com/mgmartinezl/Research-topic/blob/master/DataLake-ML-Analytics-AWS.PNG)  
+![AWSStack](./Images/DataLake-ML-Analytics-AWS.PNG)  
 [Taken from: [4]](https://aws.amazon.com/big-data/datalakes-and-analytics/)
 
 In the following sections, we will approach the different stages that the previous environment covers.
@@ -49,31 +49,37 @@ Using AWS services for analytics or machine learning, requires first having the 
 #### 1.1.1. On-premises data movement
 * [AWS Direct Connect](https://aws.amazon.com/directconnect/) solution aims to establish a dedicated network connection between local premises and the AWS cloud. This connection uses the standard 802.1q VLANs and hence can be partitioned into multiple virtual interfaces, which allows the access to both public and private resources through different IPs. This solutions works as follows:
 
-![AWSDC](https://github.com/mgmartinezl/Research-topic/blob/master/AWS-Direct-Connect.png)
+![AWSDC](./Images/AWS-Direct-Connect.png)
 
 * [AWS Snowball](https://aws.amazon.com/snowball/) is a data transport solution for data in the scale of petabytes. According to AWS Snowball official website, _"customers today use Snowball to migrate analytics data, genomics data, video libraries, image repositories, backups, and to archive part of data center shutdowns, tape replacement or application migration projects"_. By creating a job in the AWS Management Console, a Snowball device will be shipped to the customer address, and no code or hardware purchasing is required. The whole process works as follows:
 
-![AWSSnowball](https://github.com/mgmartinezl/Research-topic/blob/master/AWS-Snowball.png)
+![AWSSnowball](./Images/AWS-Snowball.png)
 
 * Similarly, [AWS Snowmobile](https://aws.amazon.com/snowmobile/?nc2=h_m1) is a data transport solution built for an exabyte-scale. Each snowmobile (a 45-foot long ruggedized shipping container, pulled by a semi-trailer truck) can transfer up to 100PB, which makes easy _"to move massive volumes of data to the cloud, including video libraries, image repositories, or even a complete data center migration"_. AWS Snowmobile requires local installation and configuration by AWS experts. After setting up the connection and the network, data can be imported into Amazon S3 or Amazon Glacier.
 
 #### 1.1.1. Real-time data movement
 * [Amazon Kinesis](https://aws.amazon.com/kinesis/?nc2=h_m1) is a tool to collect, process and analyze streaming data in a real-time basis, _"such as video, audio, application logs, website clickstreams, and IoT telemetry data for machine learning, analytics, and other applications"_. It works as follows:
 
-![Kinesis](https://github.com/mgmartinezl/Research-topic/blob/master/Amazon-Kinesis.png)
+![Kinesis](./Images/Amazon-Kinesis.png)
 
 * [AWS IoT Core](https://aws.amazon.com/iot-core/?nc2=h_iot) is aanother real-time data capturing solution that focuses on Internet of Things devices data. This tool can connect billions of devices between them and also to other external endpoints or devices that use additional AWS services, such as AWS Lambda, Amazon Kinesis, Amazon S3, Amazon SageMaker, Amazon DynamoDB, Amazon CloudWatch, AWS CloudTrail, and Amazon QuickSight. Additionally, these apps can track the connected devices 100% of the time, even if they are not connected because the app _"stores the latest state of a connected device so that it can be read or set at anytime, making the device appear to your applications as if it were online all the time"_. The logic behind this concept is as shown:
 
 **First, connect devices:**
-![Connect](https://github.com/mgmartinezl/Research-topic/blob/master/AWS-IoT-connect.png)
+![Connect](./Images/AWS-IoT-connect.png)
 
 **Second, secure connections and data:**
-![Secure](https://github.com/mgmartinezl/Research-topic/blob/master/AWS-IoT-secure.png)
+![Secure](./Images/AWS-IoT-secure.png)
 
 **Third, process collected data** according to predefined business rules:
-![Process](https://github.com/mgmartinezl/Research-topic/blob/master/AWS-IoT-process.png)
+![Process](./Images/AWS-IoT-process.png)
 
 ### 1.2. Data lakes (Charlie)
+
+The paradigm of having Data lakes with raw structured and unstructured data is becoming the standard within the industry, because they allow storing the data coming from a wide set of sources in its most natural form so we can build Analytic views on the top. The most important activities to consider when creating a data lake are: ingest, store, find, process, and analyze the data. 
+
+AWS offers the data lake solution that automatically configures core AWS services to generate a data lake architecture on the AWS Cloud. This solution have the following architecture:
+
+![] (./Images/AWS-IoT-process.png)
 
 #### 1.2.1. Object storage (Charlie)
 
@@ -103,13 +109,13 @@ Using AWS services for analytics or machine learning, requires first having the 
    * **Restful API** that allows querying Elasticsearch while providing a user interface.
    
 Moreover, the Amazon Elasticsearch Service works as shown below, offering a bunch of different analytical services on top of Elasticsearch besides its main capability associated with full-text search:
-![Elastic](https://github.com/mgmartinezl/Research-topic/blob/master/AWS-Elasticsearch.png)
+![Elastic](./Images/AWS-Elasticsearch.png)
 
 #### 1.3.5. Visualization
 * [Amazon Quicksight](https://aws.amazon.com/quicksight/?nc2=h_m1) is AWS business intelligence scalable tool that allows presenting insights up to a 10.000 users simultaneously. Through this tool, it is possible to create and publish dashboards not only with descriptive information but also with machine learning capabilities. Moreover, dashboards can be accessed from any device and can be embedded into different applications. In particular, this solution offers a Pay-per-Session pricing schema that allows giving access
 to everyone to the data they need, while only paying for what they use. This service works as described in the following graph:
 
-![Quicksight](https://github.com/mgmartinezl/Research-topic/blob/master/Amazon-Quicksight.png)
+![Quicksight](./Images/Amazon-Quicksight.png)
 
 ### 1.4. Machine learning
 
