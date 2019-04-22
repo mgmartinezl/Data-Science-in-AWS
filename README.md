@@ -75,17 +75,51 @@ Using AWS services for analytics or machine learning, requires first having the 
 
 ### 1.2. Data lakes (Charlie)
 
-The paradigm of having Data lakes with raw structured and unstructured data is becoming the standard within the industry, because they allow storing the data coming from a wide set of sources in its most natural form so we can build Analytic views on the top. The most important activities to consider when creating a data lake are: ingest, store, find, process, and analyze the data. 
+The paradigm of having Data lakes with raw structured and unstructured data is becoming the standard within the industry, because they allow storing the data coming from a wide set of sources in its most natural form so we can build Analytic views on the top.  
 
 AWS offers the data lake solution that automatically configures core AWS services to generate a data lake architecture on the AWS Cloud. This solution have the following architecture:
 
-![] (./Images/AWS-IoT-process.png)
+![Architecture](./Images/Architecture-Diagram_Data-Lake-on-AWS.png)
+
+This solution implements a data lake API, through Amazon API Gateway to provide access to the following data lake microservices:
+
+- __Admin Microservice__ handles all administrative services including user and group management, general settings, governance settings, API keys, and role authorization for all operations within the data lake.
+
+- __Cart Microservice__ handles all cart operations including item lists, adding items, removing items, and generating manifests for user carts.
+
+- __Manifest Microservice__ uploads import manifest files, which allows existing Amazon S3 content to be bulk imported into a package.
+
+- __Package Microservice__ handles all package operations including list, add package, remove package, update package, list metadata, add metadata, update metadata, list datasets, add dataset, remove dataset, process manifest, run AWS Glue on-demand crawler, list and access AWS Glue tables, and view dataset on Amazon Athena
+
+- __Search Microservice__ handles all search operations including query, index document, and remove indexed document.
+
+- __Profile Microservice__ Handles all profile operations for data lake users, including get and generate secret access key.
+
+- __Logging Microservice__ interfaces between the data lake microservices and Amazon CloudWatch Logs.
+
+    
 
 #### 1.2.1. Object storage (Charlie)
 
-#### 1.2.2. Backup and archive (Charlie)
+In a data lake the structure of the data or schema is not defined when data is captured. In fact, We can store data without considering design or caring about the information we must extract from this data in the future.
+
+The AWS data lake solution stores and registers datasets and manifest files of any size in their native form in an Amazon S3 bucket.
+
+A second Amazon S3 bucket configured for static website hosting hosts the data lake console which is exposed via the Amazon CloudFront to avoid direct access through the S3 endpoint.
+
+#### 1.2.2. Backup and archive (Charlie) 
+
+Considering to remove this as we are on the cloud 
 
 #### 1.2.3. Data catalog (Charlie)
+
+
+When we work with data lakes there is a there is a complexity added as there is not any oversight of the contents. Therefore it is important to track the metadata.
+The data lake solution uses Amazon DynamoDB tables to persist metadata for the data packages, settings, and user cart items.
+
+Additionally this solution automatically configures an AWS Glue crawler within each data package and schedules a daily scan to keep track of the changes.
+The crawlers crawl through the datasets and inspect portions of them to infer a data schema and persist the output as one or more metadata tables that are defined in the AWS Glue Data Catalog.
+
 
 ### 1.3. Analytics
 
