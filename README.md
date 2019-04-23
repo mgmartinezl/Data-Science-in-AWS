@@ -83,7 +83,7 @@ AWS offers the data lake solution that automatically configures core AWS service
 
 This solution implements a data lake API, through Amazon API Gateway to provide access to the following data lake microservices:
 
-- __Admin Microservice__ handles all administrative services including user and group management, general settings, governance settings, API keys, and role authorization for all operations within the data lake.
+- __Admin Microservice__ handles administrative services including user and group management, settings, settings, API keys, and role authorization for all operations within the data lake.
 
 - __Cart Microservice__ handles all cart operations including item lists, adding items, removing items, and generating manifests for user carts.
 
@@ -97,28 +97,34 @@ This solution implements a data lake API, through Amazon API Gateway to provide 
 
 - __Logging Microservice__ interfaces between the data lake microservices and Amazon CloudWatch Logs.
 
-    
+
+Finally, the solution uses an Amazon Elasticsearch Service cluster to index data lake package data for searching. 
+
 
 #### 1.2.1. Object storage (Charlie)
 
 In a data lake the structure of the data or schema is not defined when data is captured. In fact, We can store data without considering design or caring about the information we must extract from this data in the future.
 
 The AWS data lake solution stores and registers datasets and manifest files of any size in their native form in an Amazon S3 bucket.
-
 A second Amazon S3 bucket configured for static website hosting hosts the data lake console which is exposed via the Amazon CloudFront to avoid direct access through the S3 endpoint.
-
-#### 1.2.2. Backup and archive (Charlie) 
-
-Considering to remove this as we are on the cloud 
 
 #### 1.2.3. Data catalog (Charlie)
 
+When we work with data lakes there is a complexity added as there is not oversight of the contents. Therefore it is important to track the metadata.
+The data lake solution uses Amazon DynamoDB tables to persist metadata for the data packages, settings, and user cart items. The following tables are available:
 
-When we work with data lakes there is a there is a complexity added as there is not any oversight of the contents. Therefore it is important to track the metadata.
-The data lake solution uses Amazon DynamoDB tables to persist metadata for the data packages, settings, and user cart items.
+- __data-lake-packages:__ persistent store for data package title and description, and a list of groups that can access the package
+- __data-lake-metadata:__ persistent store for metadata tag values associated with packages
+- __data-lake-datasets:__ persistent store for dataset pointers to Amazon S3 objects
+- __data-lake-cart:__ persistent store for user cart items
+- __data-lake-keys:__ persistent store for user access key ID references
+- __data-lake-settings:__ persistent store for data lake configuration and governance settings
 
 Additionally this solution automatically configures an AWS Glue crawler within each data package and schedules a daily scan to keep track of the changes.
 The crawlers crawl through the datasets and inspect portions of them to infer a data schema and persist the output as one or more metadata tables that are defined in the AWS Glue Data Catalog.
+__AWS Glue__ provides built-in classifiers to infer schemas from common files with formats that include JSON, CSV, and Apache Avro.
+
+[Taken from: [4]](https://docs.aws.amazon.com/solutions/latest/data-lake-solution/appendix-b.html)  
 
 
 ### 1.3. Analytics
