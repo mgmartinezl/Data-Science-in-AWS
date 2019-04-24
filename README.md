@@ -65,14 +65,14 @@ Using AWS services for analytics or machine learning, requires first having the 
 
 * [AWS IoT Core](https://aws.amazon.com/iot-core/?nc2=h_iot) is aanother real-time data capturing solution that focuses on Internet of Things devices data. This tool can connect billions of devices between them and also to other external endpoints or devices that use additional AWS services, such as AWS Lambda, Amazon Kinesis, Amazon S3, Amazon SageMaker, Amazon DynamoDB, Amazon CloudWatch, AWS CloudTrail, and Amazon QuickSight. Additionally, these apps can track the connected devices 100% of the time, even if they are not connected because the app _"stores the latest state of a connected device so that it can be read or set at anytime, making the device appear to your applications as if it were online all the time"_. The logic behind this concept is as shown:
 
-**First, connect devices:**
-![Connect](./Images/AWS-IoT-connect.png)
+   **First, connect devices:**
+   ![Connect](./Images/AWS-IoT-connect.png)
 
-**Second, secure connections and data:**
-![Secure](./Images/AWS-IoT-secure.png)
+   **Second, secure connections and data:**
+   ![Secure](./Images/AWS-IoT-secure.png)
 
-**Third, process collected data** according to predefined business rules:
-![Process](./Images/AWS-IoT-process.png)
+   **Third, process collected data** according to predefined business rules:
+   ![Process](./Images/AWS-IoT-process.png)
 
 ### 1.2. Data lakes
 The paradigm of having Data lakes with raw structured and unstructured data is becoming the standard within the industry, because they allow storing the data coming from a wide set of sources in its most natural form so we can build Analytic views on the top.  
