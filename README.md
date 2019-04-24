@@ -91,19 +91,13 @@ The entry point to the data lake is done through the [Amazon API Gateway](https:
 
 The AWS solution provide access to the following data lake microservices:
 
-- __Admin Microservice__ handles administrative services including user and group management, settings, settings, API keys, and role authorization for all operations within the data lake.
-
-- __Cart Microservice__ handles all cart operations including item lists, adding items, removing items, and generating manifests for user carts.
-
-- __Manifest Microservice__ uploads import manifest files, which allows existing Amazon S3 content to be bulk imported into a package.
-
-- __Package Microservice__ handles all package operations including list, add package, remove package, update package, list metadata, add metadata, update metadata, list datasets, add dataset, remove dataset, process manifest, run AWS Glue on-demand crawler, list and access AWS Glue tables, and view dataset on Amazon Athena
-
-- __Search Microservice__ handles all search operations including query, index document, and remove indexed document.
-
-- __Profile Microservice__ Handles all profile operations for data lake users, including get and generate secret access key.
-
-- __Logging Microservice__ interfaces between the data lake microservices and Amazon CloudWatch Logs.
+- **Admin microservice** handles administrative services including user and group management, settings, settings, API keys, and role authorization for all operations within the data lake.
+- **Cart microservice** handles all cart operations including item lists, adding items, removing items, and generating manifests for user carts.
+- **Manifest microservice** uploads import manifest files, which allows existing Amazon S3 content to be bulk imported into a package.
+- **Package microservice** handles all package operations including list, add package, remove package, update package, list metadata, add metadata, update metadata, list datasets, add dataset, remove dataset, process manifest, run AWS Glue on-demand crawler, list and access AWS Glue tables, and view dataset on Amazon Athena
+- **Search microservice** handles all search operations including query, index document, and remove indexed document.
+- **Profile microservice** Handles all profile operations for data lake users, including get and generate secret access key.
+- **Logging microservice** interfaces between the data lake microservices and Amazon CloudWatch Logs.
 
 All the previous microservices use [AWS Lambda](https://aws.amazon.com/lambda/) as the provisioner of the back-end services that can be consumed through a CLI or through the web console deployed as part of the solution. Some advantages of AWS Lambda are: avoid the use and management of servers and the continuous scaling of the application by running each code request in parallel.
 
@@ -117,14 +111,14 @@ A second S3 bucket configured for static website hosting hosts the data lake con
 #### 1.2.3. Data catalog 
 
 When we work with data lakes there is a complexity added as there is not oversight of the contents. Therefore it is important to track the metadata.
-The data lake solution uses __Amazon DynamoDB__ tables to persist metadata for the data packages, settings, and user cart items. The following tables are available:
+The data lake solution uses **Amazon DynamoDB** tables to persist metadata for the data packages, settings, and user cart items. The following tables are available:
 
-- __data-lake-packages:__ persistent store for data package title and description, and a list of groups that can access the package
-- __data-lake-metadata:__ persistent store for metadata tag values associated with packages
-- __data-lake-datasets:__ persistent store for dataset pointers to Amazon S3 objects
-- __data-lake-cart:__ persistent store for user cart items
-- __data-lake-keys:__ persistent store for user access key ID references
-- __data-lake-settings:__ persistent store for data lake configuration and governance settings
+- **data-lake-packages:** persistent store for data package title and description, and a list of groups that can access the package.
+- **data-lake-metadata:** persistent store for metadata tag values associated with packages.
+- **data-lake-datasets:** persistent store for dataset pointers to Amazon S3 objects.
+- **data-lake-cart:** persistent store for user cart items.
+- **data-lake-keys:** persistent store for user access key ID references.
+- **data-lake-settings:** persistent store for data lake configuration and governance settings.
 
 Additionally this solution automatically configures an [AWS Glue crawler]() within each data package and schedules a daily scan to keep track of the changes.
 The crawlers crawl through the datasets and inspect portions of them to infer a data schema and persist the output as one or more metadata tables that are defined in the AWS Glue Data Catalog.
@@ -140,11 +134,9 @@ This services works very easily following 3 simple steps:
  2. Generate and Edit Transformations: By selecting a data source and data target. AWS Glue will generate ETL code in Scala or Python to extract data from the source, transform the data to match the target schema, and load it into the target.
  3. Schedule and Run Your Jobs: Schedule recurring ETL jobs or chain them or invoke them on-demand.
 
-
 #### 1.2.5. Security management
 
 The security on a data lake is very important because the data stored inside might be very sensitive and the access allowed to each user need to be controlled. Therefore all the dataset objects stored in [AWS S3](https://aws.amazon.com/s3/) are encrypted using the [AWS KMS Key](https://aws.amazon.com/kms/) service. This security will be handled through [Amazon cognito](https://aws.amazon.com/cognito/) which will work as the authentication media for the different users of the data lake.  
-
 
 #### 1.2.6. Indexing management
 
