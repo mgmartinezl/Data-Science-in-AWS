@@ -35,7 +35,8 @@ Written by:
     - [Speech recognition](#222-speech-recognition)
     - [Natural language processing](#223-natural-language-processing)
     - [Recommendation engines](#224-recommendation-engines)
-  
+- [AWS Adoption](#1-data-lakes-and-analytics-on-top-of-aws) 
+ 
  ***
 
 ## Introduction: what is *_data science_* and why is it important?
@@ -316,3 +317,12 @@ Finally, it is important to acknowledge that the concept of _deep learning_ is a
    Companies such as Domino's, spuul and zola already use this app to provide personalized notifications.
 
 Additional Amazon AI services also include document analysis ([Amazon Textract](https://aws.amazon.com/textract/)), conversational agents ([Amazon Lex](https://aws.amazon.com/lex/)), translation ([Amazon Translate](https://aws.amazon.com/translate/)) and transcription ([Amazon Transcribe](https://aws.amazon.com/transcribe/)).
+
+## AWS Enterprise Cloud Adoption
+
+![AWSAdoption](./Images/AWS-Adoption.PNG) [Taken from [6]](https://www.datamation.com/cloud-computing/aws-vs-azure-vs-google-cloud-comparison.html)
+
+The graph above shows the adoption rates of the main cloud providers. Although it is difficult nowadays to get the specific figures for the adoption of Data Science services on the cloud we acknowledge that once a customer is on the cloud the tendency is to use the full stack of services on it.
+Therefore we can trust AWS is still the service with the highest number of apps Running on its cloud services.
+
+One case of study using Analytic services is [Formula One Group](https://aws.amazon.com/solutions/case-studies/formula-one/)
