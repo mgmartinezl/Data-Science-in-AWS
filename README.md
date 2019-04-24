@@ -75,13 +75,21 @@ Using AWS services for analytics or machine learning, requires first having the 
 
 ### 1.2. Data lakes (Charlie)
 
-The paradigm of having Data lakes with raw structured and unstructured data is becoming the standard within the industry, because they allow storing the data coming from a wide set of sources in its most natural form so we can build Analytic views on the top.  
+The paradigm of having Data lakes with raw structured and unstructured data is becoming the standard within the industry, because they allow storing the data coming from a wide set of sources in its most natural form so we can build Analytic views on the top.
+
+Some use cases within industry of data going into the lake are log files data from click-streams, social media, internet connected devices. Meanwhile the future analysis to be done from this data could answer the needs of attracting and retaining customers, improving productivity, plan appropriate maintenance, make informed decisions.
+  
 
 AWS offers the data lake solution that automatically configures core AWS services to generate a data lake architecture on the AWS Cloud. This solution have the following architecture:
 
 ![Architecture](./Images/Architecture-Diagram_Data-Lake-on-AWS.png)
 
-This solution implements a data lake API, through Amazon API Gateway to provide access to the following data lake microservices:
+#### 1.2.1. Service management
+
+The entry point to the data lake is done through the [Amazon API Gateway](https://aws.amazon.com/api-gateway/) which is a service that allows you to create, publish, maintain, monitor, and secure REST and Websocket APIs acting as the exposed "front doors" to access data, business logic, or functionality from the back-end services. 
+
+
+The AWS solution provide access to the following data lake microservices:
 
 - __Admin Microservice__ handles administrative services including user and group management, settings, settings, API keys, and role authorization for all operations within the data lake.
 
@@ -97,21 +105,19 @@ This solution implements a data lake API, through Amazon API Gateway to provide 
 
 - __Logging Microservice__ interfaces between the data lake microservices and Amazon CloudWatch Logs.
 
+All the previous microservices use [AWS Lambda](https://aws.amazon.com/lambda/) as the provisioner of the back-end services that can be consumed through a CLI or through the web console deployed as part of the solution. Some advantages of AWS Lambda are: avoid the use and management of servers and the continuous scaling of the application by running each code request in parallel.
 
-Finally, the solution uses an Amazon Elasticsearch Service cluster to index data lake package data for searching. 
-
-
-#### 1.2.1. Object storage (Charlie)
+#### 1.2.2. Object storage (Charlie)
 
 In a data lake the structure of the data or schema is not defined when data is captured. In fact, We can store data without considering design or caring about the information we must extract from this data in the future.
 
-The AWS data lake solution stores and registers datasets and manifest files of any size in their native form in an Amazon S3 bucket.
-A second Amazon S3 bucket configured for static website hosting hosts the data lake console which is exposed via the Amazon CloudFront to avoid direct access through the S3 endpoint.
+The AWS data lake solution stores and registers datasets and manifest files of any size in their native form in an [Amazon S3](https://aws.amazon.com/s3/) bucket.
+A second S3 bucket configured for static website hosting hosts the data lake console which is exposed via the [Amazon CloudFront](https://aws.amazon.com/cloudfront/) to avoid direct access through the S3 endpoint.
 
 #### 1.2.3. Data catalog (Charlie)
 
 When we work with data lakes there is a complexity added as there is not oversight of the contents. Therefore it is important to track the metadata.
-The data lake solution uses Amazon DynamoDB tables to persist metadata for the data packages, settings, and user cart items. The following tables are available:
+The data lake solution uses __Amazon DynamoDB__ tables to persist metadata for the data packages, settings, and user cart items. The following tables are available:
 
 - __data-lake-packages:__ persistent store for data package title and description, and a list of groups that can access the package
 - __data-lake-metadata:__ persistent store for metadata tag values associated with packages
@@ -124,7 +130,19 @@ Additionally this solution automatically configures an AWS Glue crawler within e
 The crawlers crawl through the datasets and inspect portions of them to infer a data schema and persist the output as one or more metadata tables that are defined in the AWS Glue Data Catalog.
 __AWS Glue__ provides built-in classifiers to infer schemas from common files with formats that include JSON, CSV, and Apache Avro.
 
+#### 1.2.4. Security management
+
+The security on a data lake is very important because the data stored inside might be very sensitive and the access allowed to each user need to be controlled. Therefore all the dataset objects stored in [AWS S3](https://aws.amazon.com/s3/) are encrypted using the [AWS KMS Key](https://aws.amazon.com/kms/) service. This security will be handled through [Amazon cognito](https://aws.amazon.com/cognito/) which will work as the authentication media for the different users of the data lake.  
+
+
+#### 1.2.5. Indexing management
+
+The solution uses an [Amazon Elasticsearch Service](https://aws.amazon.com/elasticsearch-service/) cluster to index data lake package data for searching. 
+
+
 [Taken from: [4]](https://docs.aws.amazon.com/solutions/latest/data-lake-solution/appendix-b.html)  
+
+
 
 
 ### 1.3. Analytics
