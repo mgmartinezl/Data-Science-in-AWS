@@ -30,10 +30,8 @@ Therefore, as may be expected, tech leader companies around the world have been 
 Amazon Web Services is a whole ecosystem hosted by Amazon Inc. that offers on-demand cloud computing platforms to individuals, companies and governments through a pay-as-you-go basis. Also known as "AWS", this framework makes possible for its customers to access a variety of services in which data science utilities are included. The purpose of this brief repository is to approach the main products that AWS has disposed to perform _data science_, a concept that for the scope of this project will gather the following key topics:
   
 * Data lakes.
-* Data analytics.
-* Data visualization.
-* Machine learning.
-* Artificial intelligence.
+* Data analytics and visualization.
+* Artificial intelligence: machine learning and deep learning.
 
 ## 1. Data lakes and analytics on top of AWS
 
