@@ -5,7 +5,7 @@ Written by:
 **Gabriela Martinez**  
 
 ## Table of Contents
-- Introduction
+- Introduction: : what is *_data science_* and why is it important?
 - Amazon Web Services in the era of _data science_
 - Data lakes and analytics on top of AWS
   - [Data movement](1.1.-Data-movement)
