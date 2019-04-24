@@ -227,7 +227,39 @@ Similarly, for machine learning it is possible to find remarkable products such 
 ### 2.2. Deep learning
 Finally, it is important to acknowledge that the concept of _deep learning_ is also related to ML, as DL involves layering algorithms that often allow a greater understanding of the data. These algorithms, as opposed to classical ML models such as regressions, do not aim to create a explainable set of relationships between variables, but instead they are relying on their "_layers of non-linear algorithms to create distributed representations that interact based on a series of factors"_, which allows scientists to find more patterns than it is possible to code or even recognize and take them into consideration to train complex prediction models [See more at [9]](https://aws.amazon.com/machine-learning/what-is-ai/). Some of the use cases of deep learning include:
 
-* Image and video classification.
-* Speech recognition.
-* Natural language processing.
-* Recommender engines.
+#### 2.2.1. Image and video classification
+* [Amazon Rekognition](https://aws.amazon.com/rekognition/) is the tool that Amazon has built for including image and video analysis into applications. The Rekognition API and its service can identify objects, people, text, scenes, and activities, as well as any inappropriate content within a service. This tool also provides facial analysis, facial recognition and even celebrities recognition.
+   
+   The following graph depicts the general workflow of the tool:
+   ![Personalize](./Images/Amazon-Personalize.png)
+   
+   Some examples of the outputs generated from this API are:
+
+   ![Personalize1](./Images/Amazon-Personalize-1.png)
+   ![Personalize2](./Images/Amazon-Personalize-2.PNG)
+   ![Personalize3](./Images/Amazon-Personalize-3.PNG)
+
+#### 2.2.2. Speech recognition
+* [Amazon Polly](https://aws.amazon.com/polly/) is a Text-to-Speech service that synthesizes speeches through deep learning algorithms so that they sound like human voices and can enable speech-based products. Voices included in this tool are both male and female for more than 15 languages.
+
+   **Content creation** is also possible through Amazon Polly by adding speeches to media communication. The following is an use case in which an article is converted into a speech and then downloaded as MP3:
+   
+   ![AmazonPolly](./Images/Amazon-Polly-Use-Case.PNG)
+
+#### 2.2.3. Natural language processing
+* [Amazon Comprehend](https://aws.amazon.com/comprehend/) uses Natural Language Processing to find insights and patterns in text. Unstructured data coming from customer emails, support tickets, product reviews and social media can be analyzed through this service, which is useful to find key phrases, places, people, brands, or events. Moreover, sentiment analysis is also possible through the AutoML capabilities of the service that allow users to explore tailored machine learning solutions. 
+
+  Also, [Amazon Comprehend Medical](https://aws.amazon.com/comprehend/medical/) is the extended solution of this service to process complex medical information from unstructured text. Medical information such as _"medical conditions, medications, dosages, strengths, and frequencies from a variety of sources like doctor’s notes, clinical trial reports, and patient health records"_. [See more at [9]](https://aws.amazon.com/comprehend/).
+  
+  In general, Amazon Comprehend works as follows:
+  ![AmazonComprehend](./Images/Amazon-Comprehend.PNG)
+
+#### 2.2.4. Recommendation engines
+* [Amazon Personalize](https://aws.amazon.com/personalize/) is a tool to perform customer engagement by offering personalized product and content recommendations, tailored search results, and targeted marketing promotions. With only a stream provision of each particular business application, any additional information about the final customers and no prior ML knowledge, companies can access recommendations tunned by several algorithms, which allows them to use the most accurate one in each situation and reach their customers almost in real-time. The workflow of the tool is depicted as follows:
+
+![Personalize](./Images/Amazon-Personalize.png)
+
+   Companies such as Domino's, spuul and zola already use this app to provide personalized notifications.
+
+
+
