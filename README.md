@@ -147,17 +147,19 @@ to everyone to the data they need, while only paying for what they use. This ser
 
 ![Quicksight](./Images/Amazon-Quicksight.png)
 
-## 1.4. Introduction to Artificial Intelligence and Machine Learning
-Often abbreviated as "AI", _"Artificial Intelligence (AI) is the field of computer science dedicated to solving cognitive problems commonly associated with human intelligence, such as learning, problem solving, and pattern recognition"_. [Taken from: [5]](https://aws.amazon.com/machine-learning/what-is-ai/). 
+## Introduction to Artificial Intelligence and Machine Learning
+Often abbreviated as "AI", _"Artificial Intelligence (AI) is the field of computer science dedicated to solving cognitive problems commonly associated with human intelligence, such as learning, problem solving, and pattern recognition"_. [Taken from: [5]].(https://aws.amazon.com/machine-learning/what-is-ai/). 
 
 According to professor Pedro Domingos, a researcher of the field at University of Washington, there are five main _tribes_ that conform the Machine Learning. One of them is related to the Bayesians, people engaged with statistics and probability that have developed the field into different real-world applications thanks to the advancements in statistical computing, the reason why we can talk about "machine learning" for advanced bayesians techniques applied into use cases. 
 
-Moreover, another tribe within the machine learning paradigm is conformed by the connectionists, whose root comes from neuroscience. They have led this subfield of study to become what is today commonly known as "deep learning" due to advances in network computation. Therefore, both Machine learning (ML) and deep learning (DL) are science fields derived from the discipline of Artificial Intelligence. [See more at: [5]](https://aws.amazon.com/machine-learning/what-is-ai/). 
+Moreover, another tribe within the machine learning paradigm is conformed by the connectionists, whose root comes from neuroscience. They have led this subfield of study to become what is commonly known as "deep learning" due to advances in network computation. Both Machine learning (ML) and deep learning (DL) are science fields derived from the discipline of Artificial Intelligence. [See more at: [6]](https://medium.com/42ai/the-5-tribes-of-the-ml-world-670ebce96b4c). Those subfields are generally composed of several techniques that are often referred to as _supervised_ or _unsupervised_, depending on if the training data includes the desired output (which corresponds to the first split) or not.
 
-### Machine learning
-According to Amazon, machine learning _"is the name commonly applied to a number of Bayesian techniques used for pattern recognition and learning"_
+### 1.4. Machine learning
+According to the previous, machine learning _"is the name commonly applied to a number of Bayesian techniques used for pattern recognition and learning"_. [Taken from: [5]]. This is usually translated into a variety of algorithms that learn from historical data and make predictions based on it. Unlike typical computer code developed by software programmers, statistical models aim to return back a variable of interest based on patterns found in historical data rather than generating an output from a specific given input. Within an organization, ML is often following this lifecycle:
 
-Predictive analytics on top of AWS can be performed through different alternatives, depending on if teams look for predefined interfaces to deploy deep learning models or if they want to built machine learning models from scratch in a platform or application service. 
+![Quicksight](./Images/ML.png)
+
+ML or predictive analytics on top of AWS can be performed through different alternatives, depending on if teams look for predefined interfaces to deploy deep learning models or if they want to built machine learning models from scratch in a platform or application service. 
 
 #### 1.4.1. Frameworks and interfaces
 * [AWS Deep Learning AMIs](https://aws.amazon.com/machine-learning/amis/):
