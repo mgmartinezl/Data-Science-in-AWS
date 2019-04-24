@@ -245,7 +245,7 @@ Amazon provides different machine images where pre-installed EC2 instances can b
 ![SageMakerGround](./Images/Amazon-SageMaker-Ground-Truth.png)
 
    **Main disadvantages related to Amazon SageMaker**  
-   Amazon SageMaker has been released by the end of 2017, which makes it a relatively new service open to the market. Even though it has been graded with an average grade of 4.5 out of 5 by end users ([see more at [10]](https://www.g2.com/products/amazon-sagemaker/reviews), some disadvantages have been addressed as well, such as:
+   Amazon SageMaker has been released by the end of 2017, which makes it a relatively new service open to the market. Even though it has been graded with an average grade of 4.5 out of 5 by end users ([see more at [10]])(https://www.g2.com/products/amazon-sagemaker/reviews), some disadvantages have been addressed as well, such as:
    
    * A less user-friendly interface for non-technical workers.
    * It lacks enough documentation that is publicly available.
