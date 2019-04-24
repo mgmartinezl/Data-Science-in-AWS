@@ -204,7 +204,7 @@ to everyone to the data they need, while only paying for what they use. This ser
 ![Quicksight](./Images/Amazon-Quicksight.png)
 
 ## 2. Introduction to Artificial Intelligence, Machine Learning and Deep Learning
-Often abbreviated as "AI", _"Artificial Intelligence (AI) is the field of computer science dedicated to solving cognitive problems commonly associated with human intelligence, such as learning, problem solving, and pattern recognition"_. [Taken from: [5]].(https://aws.amazon.com/machine-learning/what-is-ai/). 
+Often abbreviated as "AI", _"Artificial Intelligence (AI) is the field of computer science dedicated to solving cognitive problems commonly associated with human intelligence, such as learning, problem solving, and pattern recognition"_. [Taken from: [5]](https://aws.amazon.com/machine-learning/what-is-ai/). 
 
 According to professor Pedro Domingos, a researcher of the field at University of Washington, there are five main _tribes_ that conform the Machine Learning. One of them is related to the Bayesians, people engaged with statistics and probability that have developed the field into different real-world applications thanks to the advancements in statistical computing, the reason why we can talk about "machine learning" for advanced bayesians techniques applied into use cases. 
 
@@ -241,7 +241,7 @@ Amazon provides different machine images where pre-installed EC2 instances can b
 
 ![SageMakerGround](./Images/Amazon-SageMaker-Ground-Truth.png)
 
-   **Main disadvantages related to Amazon SageMaker**
+   **Main disadvantages related to Amazon SageMaker**  
    Amazon SageMaker has been released by the end of 2017, which makes it a relatively new service open to the market. Even though it has been graded with an average grade of 4.5 out of 5 by end users ([see more at [10]](https://www.g2.com/products/amazon-sagemaker/reviews), some disadvantages have been addressed as well, such as:
    
    * A less user-friendly interface for non-technical workers.
@@ -249,7 +249,7 @@ Amazon provides different machine images where pre-installed EC2 instances can b
    * Can result in expensive costs at the beginning due to usage of GPU instances to accelerate models trained.
    * It is not still possible to schedule training jobs.
    
-   **Main advantages related to Amazon SageMaker**
+   **Main advantages related to Amazon SageMaker**  
    Overall advantages related to the product are summarized as:
    * It signifincantly reduces time-to-market.
    * It allows intuituive visualization for trained models.
