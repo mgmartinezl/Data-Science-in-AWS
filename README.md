@@ -5,36 +5,36 @@ Written by:
 **Gabriela Martinez**  
 
 ## Table of Contents
-- Introduction: : what is *_data science_* and why is it important?
-- Amazon Web Services in the era of _data science_
-- Data lakes and analytics on top of AWS
+- [Introduction: : what is *_data science_* and why is it important?](#introduction-what-is-data-science-and-why-is-it-important)
+- [Amazon Web Services in the era of _data science_]()
+- [Data lakes and analytics on top of AWS](#1-data-lakes-and-analytics-on-top-of-aws)
   - [Data movement](#11-data-movement)
     - [On-premises data movement](#111-real-time-data-movement)
-    - Real-time data movement
-  - Data lakes
-    - Service management
-    - Object storage 
-    - Data catalog
-    - ETL process 
-    - Security management
-    - Indexing management
-  - Analytics
-    - Interactive analytics
-    - Big data processing
-    - Data warehousing
-    - Real-time analytics
-    - Operational analytics
-    - Visualization
-- Introduction to Artificial Intelligence, Machine Learning and Deep Learning
-  - Machine learning on top of AWS
-    - Frameworks and interfaces
-    - Platform services
-    - External marketplace solutions
-  - Deep learning on top of AWS
-    - Image and video classification
-    - Speech recognition
-    - Natural language processing
-    - Recommendation engines
+    - [Real-time data movement](#111-real-time-data-movement)
+  - [Data lakes](#12-data-lakes)
+    - [Service management](#121-service-management)
+    - [Object storage](#122-object-storage)
+    - [Data catalog](#123-data-catalog)
+    - [ETL process](#124-etl-process)
+    - [Security management](#125-security-management)
+    - [Indexing management](#126-indexing-management)
+  - [Analytics](#13-analytics)
+    - [Interactive analytics](#131-interactive-analytics)
+    - [Big data processing](#132-big-data-processing)
+    - [Data warehousing](#133-data-warehousing)
+    - [Real-time analytics](#134-real-time-analytics)
+    - [Operational analytics](#135-operational-analytics)
+    - [Visualization](#136-visualization)
+- [Introduction to Artificial Intelligence, Machine Learning and Deep Learning](#2-introduction-to-artificial-intelligence-machine-learning-and-deep-learning)
+  - [Machine learning on top of AWS](#21-machine-learning-on-top-of-aws)
+    - [Frameworks and interfaces](#211-frameworks-and-interfaces)
+    - [Platform services](#212-platform-services)
+    - [External marketplace solutions](#213-external-marketplace-solutions)
+  - [Deep learning on top of AWS](#22-deep-learning-on-top-of-aws)
+    - [Image and video classification](#221-image-and-video-classification)
+    - [Speech recognition](#222-speech-recognition)
+    - [Natural language processing](#223-natural-language-processing)
+    - [Recommendation engines](#224-recommendation-engines)
   
  ***
 
@@ -172,6 +172,9 @@ The security on a data lake is very important because the data stored inside mig
 #### 1.2.6. Indexing management
 
 The solution uses an [Amazon Elasticsearch Service](https://aws.amazon.com/elasticsearch-service/) cluster to index data lake package data for searching. [See more at [4]](https://docs.aws.amazon.com/solutions/latest/data-lake-solution/appendix-b.html).
+
+
+
 
 ### 1.3. Analytics
 
