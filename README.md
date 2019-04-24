@@ -4,6 +4,40 @@ Written by:
 **Jose Carlos Badillo**   
 **Gabriela Martinez**  
 
+## Table of Contents
+- [Introduction]
+- [Amazon Web Services in the era of _data science_]
+- Data lakes and analytics on top of AWS
+  - Data movement
+    - On-premises data movement
+    - Real-time data movement
+  - Data lakes
+    - Service management
+    - Object storage 
+    - Data catalog
+    - ETL process 
+    - Security management
+    - Indexing management
+  - Analytics
+    - Interactive analytics
+    - Big data processing
+    - Data warehousing
+    - Real-time analytics
+    - Operational analytics
+    - Visualization
+- Introduction to Artificial Intelligence, Machine Learning and Deep Learning
+  - Machine learning on top of AWS
+    - Frameworks and interfaces
+    - Platform services
+    - External marketplace solutions
+  - Deep learning on top of AWS
+    - Image and video classification
+    - Speech recognition
+    - Natural language processing
+    - Recommendation engines
+  
+  
+
 ## Introduction: what is *_data science_* and why is it important?
 Defining what data science is, is still a non-trivial task. One could say that this concept is related to the discipline of building smart applications that leverage the power of statistics, computer science and specific domain knowledge and produce valuable outputs from data. With regards to this, Mike Driscoll's, CEO of Metamarket, says:  
   
@@ -86,7 +120,6 @@ AWS offers the data lake solution that automatically configures core AWS service
 
 The entry point to the data lake is done through the [Amazon API Gateway](https://aws.amazon.com/api-gateway/) which is a service that allows you to create, publish, maintain, monitor, and secure REST and Websocket APIs acting as the exposed "front doors" to access data, business logic, or functionality from the back-end services. 
 
-
 The AWS solution provide access to the following data lake microservices:
 
 - **Admin microservice** handles administrative services including user and group management, settings, settings, API keys, and role authorization for all operations within the data lake.
@@ -164,7 +197,7 @@ The solution uses an [Amazon Elasticsearch Service](https://aws.amazon.com/elast
 Moreover, the Amazon Elasticsearch Service works as shown below, offering a bunch of different analytical services on top of Elasticsearch besides its main capability associated with full-text search:
 ![Elastic](./Images/AWS-Elasticsearch.png)
 
-#### 1.3.5. Visualization
+#### 1.3.6. Visualization
 * [Amazon Quicksight](https://aws.amazon.com/quicksight/?nc2=h_m1) is AWS business intelligence scalable tool that allows presenting insights up to a 10.000 users simultaneously. Through this tool, it is possible to create and publish dashboards not only with descriptive information but also with machine learning capabilities. Moreover, dashboards can be accessed from any device and can be embedded into different applications. In particular, this solution offers a Pay-per-Session pricing schema that allows giving access
 to everyone to the data they need, while only paying for what they use. This service works as described in the following graph:
 
@@ -177,7 +210,7 @@ According to professor Pedro Domingos, a researcher of the field at University o
 
 Moreover, another tribe within the machine learning paradigm is conformed by the connectionists, whose root comes from neuroscience. They have led this subfield of study to become what is commonly known as "deep learning" due to advances in network computation. Both Machine learning (ML) and deep learning (DL) are science fields derived from the discipline of Artificial Intelligence. [See more at: [6]](https://medium.com/42ai/the-5-tribes-of-the-ml-world-670ebce96b4c). Those subfields are generally composed of several techniques that are often referred to as _supervised_ or _unsupervised_, depending on if the training data includes the desired output (which corresponds to the first split) or not.
 
-### 2.1. Machine learning
+### 2.1. Machine learning on top of AWS
 According to the previous, machine learning _"is the name commonly applied to a number of Bayesian techniques used for pattern recognition and learning"_. [Taken from: [5]]. This is usually translated into a variety of algorithms that learn from historical data and make predictions based on it. Unlike typical computer code developed by software programmers, statistical models aim to return back a variable of interest based on patterns found in historical data rather than generating an output from a specific given input. Within an organization, ML is often following this lifecycle:
 
 ![Quicksight](./Images/ML.png)
@@ -224,7 +257,7 @@ Similarly, for machine learning it is possible to find remarkable products such 
 * [**Databricks Unified Analytics Platform**](https://aws.amazon.com/marketplace/pp/B07K2NJKRW?qid=1556102162197&sr=0-10&ref_=srh_res_product_title): powered by the creators of Apache Spark and MLflow _"it provides data science and engineering teams ready-to-use clusters with optimized Apache Spark and various ML frameworks(e.g., TensorFlow) coupled with powerful collaboration capabilities to improve productivity across the ML lifecycle"_.
 * [**ML Workbench for TensorFlow**](https://aws.amazon.com/marketplace/pp/B07MFRDXTB?qid=1556102162197&sr=0-9&ref_=srh_res_product_title) provides a zero-admin solution that includes the architecture necessary to run machine learning jobs in an optimal way. It includes Ubuntu 18.04 with Jupyter, JupyterLab, TensorBoard and preconfigured conda environments for Tensorflow 1.13.1 and TensorFlow 2 Alpha including the latest matching versions of CUDA 10.0 and cuDNN 7.5.0 for GPU-accelerated computing.
 
-### 2.2. Deep learning
+### 2.2. Deep learning on top of AWS
 Finally, it is important to acknowledge that the concept of _deep learning_ is also related to ML, as DL involves layering algorithms that often allow a greater understanding of the data. These algorithms, as opposed to classical ML models such as regressions, do not aim to create a explainable set of relationships between variables, but instead they are relying on their "_layers of non-linear algorithms to create distributed representations that interact based on a series of factors"_, which allows scientists to find more patterns than it is possible to code or even recognize and take them into consideration to train complex prediction models [See more at [9]](https://aws.amazon.com/machine-learning/what-is-ai/). Some of the use cases of deep learning include:
 
 #### 2.2.1. Image and video classification
