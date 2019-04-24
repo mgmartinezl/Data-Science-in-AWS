@@ -286,7 +286,9 @@ Finally, it is important to acknowledge that the concept of _deep learning_ is a
    ![Personalize3](./Images/Amazon-Personalize-3.PNG)
       
    **Main critics related to Amazon Rekognition**  
-   In the past, this tool used to be compared against the Google Cloud Vision solution and seemed to be less powerful, as Amazon Rekognition did not use to detect logos and violent content, features that have been included into the product by January 2019. However, many still say that Google Cloud Vision has a better performance due to the training set it uses.
+   In the past, this tool used to be compared against the Google Cloud Vision solution and seemed to be less powerful, as Amazon Rekognition did not use to detect logos and violent content, features that have been included into the product by January 2019. However, many still say that Google Cloud Vision has a better performance due to the training set it uses. [See more at: [11]](https://cloudacademy.com/blog/google-vision-vs-amazon-rekognition/).
+   
+   Another criticism made to Amazon Rekognition is related to the ethnic and gender bias it is claimed to have. According to MIT researchers, this tool has several issues recognizing black and asian people, with an average of 77% of accuracy compared to a 99% for white people ([see more at []](https://medium.com/@Joy.Buolamwini/response-racial-and-gender-bias-in-amazon-rekognition-commercial-ai-system-for-analyzing-faces-a289222eeced)). To illustrate this, the team found that according to the software, Oprah Winfrey is a male with 76.5% of likelihood. [See more at: [12]](https://medium.com/@Joy.Buolamwini/response-racial-and-gender-bias-in-amazon-rekognition-commercial-ai-system-for-analyzing-faces-a289222eeced). Moreover, 
 
 #### 2.2.2. Speech recognition
 * [Amazon Polly](https://aws.amazon.com/polly/) is a Text-to-Speech service that synthesizes speeches through deep learning algorithms so that they sound like human voices and can enable speech-based products. Voices included in this tool are both male and female for more than 15 languages.
