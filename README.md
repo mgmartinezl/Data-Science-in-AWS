@@ -4,6 +4,40 @@ Written by:
 **Jose Carlos Badillo**   
 **Gabriela Martinez**  
 
+## Table of Contents
+- Introduction
+- Amazon Web Services in the era of _data science_
+- Data lakes and analytics on top of AWS
+  - [Data movement](1.1.-Data-movement)
+    - On-premises data movement
+    - Real-time data movement
+  - Data lakes
+    - Service management
+    - Object storage 
+    - Data catalog
+    - ETL process 
+    - Security management
+    - Indexing management
+  - Analytics
+    - Interactive analytics
+    - Big data processing
+    - Data warehousing
+    - Real-time analytics
+    - Operational analytics
+    - Visualization
+- Introduction to Artificial Intelligence, Machine Learning and Deep Learning
+  - Machine learning on top of AWS
+    - Frameworks and interfaces
+    - Platform services
+    - External marketplace solutions
+  - Deep learning on top of AWS
+    - Image and video classification
+    - Speech recognition
+    - Natural language processing
+    - Recommendation engines
+  
+ ***
+
 ## Introduction: what is *_data science_* and why is it important?
 Defining what data science is, is still a non-trivial task. One could say that this concept is related to the discipline of building smart applications that leverage the power of statistics, computer science and specific domain knowledge and produce valuable outputs from data. With regards to this, Mike Driscoll's, CEO of Metamarket, says:  
   
@@ -30,12 +64,10 @@ Therefore, as may be expected, tech leader companies around the world have been 
 Amazon Web Services is a whole ecosystem hosted by Amazon Inc. that offers on-demand cloud computing platforms to individuals, companies and governments through a pay-as-you-go basis. Also known as "AWS", this framework makes possible for its customers to access a variety of services in which data science utilities are included. The purpose of this brief repository is to approach the main products that AWS has disposed to perform _data science_, a concept that for the scope of this project will gather the following key topics:
   
 * Data lakes.
-* Data analytics.
-* Data visualization.
-* Machine learning.
-* Artificial intelligence.
+* Data analytics and visualization.
+* Artificial intelligence: machine learning and deep learning.
 
-## 1. Data lakes, machine learning and analytics on top of AWS
+## 1. Data lakes and analytics on top of AWS
 
 AWS offers a set of services that allow companies create an environment that is able to process heterogeneous data and apply machine learning or analytics on it, as shown in the following schema:
 
@@ -88,22 +120,15 @@ AWS offers the data lake solution that automatically configures core AWS service
 
 The entry point to the data lake is done through the [Amazon API Gateway](https://aws.amazon.com/api-gateway/) which is a service that allows you to create, publish, maintain, monitor, and secure REST and Websocket APIs acting as the exposed "front doors" to access data, business logic, or functionality from the back-end services. 
 
-
 The AWS solution provide access to the following data lake microservices:
 
-- __Admin Microservice__ handles administrative services including user and group management, settings, settings, API keys, and role authorization for all operations within the data lake.
-
-- __Cart Microservice__ handles all cart operations including item lists, adding items, removing items, and generating manifests for user carts.
-
-- __Manifest Microservice__ uploads import manifest files, which allows existing Amazon S3 content to be bulk imported into a package.
-
-- __Package Microservice__ handles all package operations including list, add package, remove package, update package, list metadata, add metadata, update metadata, list datasets, add dataset, remove dataset, process manifest, run AWS Glue on-demand crawler, list and access AWS Glue tables, and view dataset on Amazon Athena
-
-- __Search Microservice__ handles all search operations including query, index document, and remove indexed document.
-
-- __Profile Microservice__ Handles all profile operations for data lake users, including get and generate secret access key.
-
-- __Logging Microservice__ interfaces between the data lake microservices and Amazon CloudWatch Logs.
+- **Admin microservice** handles administrative services including user and group management, settings, settings, API keys, and role authorization for all operations within the data lake.
+- **Cart microservice** handles all cart operations including item lists, adding items, removing items, and generating manifests for user carts.
+- **Manifest microservice** uploads import manifest files, which allows existing Amazon S3 content to be bulk imported into a package.
+- **Package microservice** handles all package operations including list, add package, remove package, update package, list metadata, add metadata, update metadata, list datasets, add dataset, remove dataset, process manifest, run AWS Glue on-demand crawler, list and access AWS Glue tables, and view dataset on Amazon Athena
+- **Search microservice** handles all search operations including query, index document, and remove indexed document.
+- **Profile microservice** Handles all profile operations for data lake users, including get and generate secret access key.
+- **Logging microservice** interfaces between the data lake microservices and Amazon CloudWatch Logs.
 
 All the previous microservices use [AWS Lambda](https://aws.amazon.com/lambda/) as the provisioner of the back-end services that can be consumed through a CLI or through the web console deployed as part of the solution. Some advantages of AWS Lambda are: avoid the use and management of servers and the continuous scaling of the application by running each code request in parallel.
 
@@ -117,14 +142,14 @@ A second S3 bucket configured for static website hosting hosts the data lake con
 #### 1.2.3. Data catalog 
 
 When we work with data lakes there is a complexity added as there is not oversight of the contents. Therefore it is important to track the metadata.
-The data lake solution uses __Amazon DynamoDB__ tables to persist metadata for the data packages, settings, and user cart items. The following tables are available:
+The data lake solution uses **Amazon DynamoDB** tables to persist metadata for the data packages, settings, and user cart items. The following tables are available:
 
-- __data-lake-packages:__ persistent store for data package title and description, and a list of groups that can access the package
-- __data-lake-metadata:__ persistent store for metadata tag values associated with packages
-- __data-lake-datasets:__ persistent store for dataset pointers to Amazon S3 objects
-- __data-lake-cart:__ persistent store for user cart items
-- __data-lake-keys:__ persistent store for user access key ID references
-- __data-lake-settings:__ persistent store for data lake configuration and governance settings
+- **data-lake-packages:** persistent store for data package title and description, and a list of groups that can access the package.
+- **data-lake-metadata:** persistent store for metadata tag values associated with packages.
+- **data-lake-datasets:** persistent store for dataset pointers to Amazon S3 objects.
+- **data-lake-cart:** persistent store for user cart items.
+- **data-lake-keys:** persistent store for user access key ID references.
+- **data-lake-settings:** persistent store for data lake configuration and governance settings.
 
 Additionally this solution automatically configures an [AWS Glue crawler]() within each data package and schedules a daily scan to keep track of the changes.
 The crawlers crawl through the datasets and inspect portions of them to infer a data schema and persist the output as one or more metadata tables that are defined in the AWS Glue Data Catalog.
@@ -140,17 +165,13 @@ This services works very easily following 3 simple steps:
  2. Generate and Edit Transformations: By selecting a data source and data target. AWS Glue will generate ETL code in Scala or Python to extract data from the source, transform the data to match the target schema, and load it into the target.
  3. Schedule and Run Your Jobs: Schedule recurring ETL jobs or chain them or invoke them on-demand.
 
-
 #### 1.2.5. Security management
 
 The security on a data lake is very important because the data stored inside might be very sensitive and the access allowed to each user need to be controlled. Therefore all the dataset objects stored in [AWS S3](https://aws.amazon.com/s3/) are encrypted using the [AWS KMS Key](https://aws.amazon.com/kms/) service. This security will be handled through [Amazon cognito](https://aws.amazon.com/cognito/) which will work as the authentication media for the different users of the data lake.  
 
-
 #### 1.2.6. Indexing management
 
-The solution uses an [Amazon Elasticsearch Service](https://aws.amazon.com/elasticsearch-service/) cluster to index data lake package data for searching. 
-
-[Taken from: [4]](https://docs.aws.amazon.com/solutions/latest/data-lake-solution/appendix-b.html)  
+The solution uses an [Amazon Elasticsearch Service](https://aws.amazon.com/elasticsearch-service/) cluster to index data lake package data for searching. [See more at [4]](https://docs.aws.amazon.com/solutions/latest/data-lake-solution/appendix-b.html).
 
 ### 1.3. Analytics
 
@@ -176,46 +197,53 @@ The solution uses an [Amazon Elasticsearch Service](https://aws.amazon.com/elast
 Moreover, the Amazon Elasticsearch Service works as shown below, offering a bunch of different analytical services on top of Elasticsearch besides its main capability associated with full-text search:
 ![Elastic](./Images/AWS-Elasticsearch.png)
 
-#### 1.3.5. Visualization
+#### 1.3.6. Visualization
 * [Amazon Quicksight](https://aws.amazon.com/quicksight/?nc2=h_m1) is AWS business intelligence scalable tool that allows presenting insights up to a 10.000 users simultaneously. Through this tool, it is possible to create and publish dashboards not only with descriptive information but also with machine learning capabilities. Moreover, dashboards can be accessed from any device and can be embedded into different applications. In particular, this solution offers a Pay-per-Session pricing schema that allows giving access
 to everyone to the data they need, while only paying for what they use. This service works as described in the following graph:
 
 ![Quicksight](./Images/Amazon-Quicksight.png)
 
-## Introduction to Artificial Intelligence and Machine Learning
+## 2. Introduction to Artificial Intelligence, Machine Learning and Deep Learning
 Often abbreviated as "AI", _"Artificial Intelligence (AI) is the field of computer science dedicated to solving cognitive problems commonly associated with human intelligence, such as learning, problem solving, and pattern recognition"_. [Taken from: [5]].(https://aws.amazon.com/machine-learning/what-is-ai/). 
 
 According to professor Pedro Domingos, a researcher of the field at University of Washington, there are five main _tribes_ that conform the Machine Learning. One of them is related to the Bayesians, people engaged with statistics and probability that have developed the field into different real-world applications thanks to the advancements in statistical computing, the reason why we can talk about "machine learning" for advanced bayesians techniques applied into use cases. 
 
 Moreover, another tribe within the machine learning paradigm is conformed by the connectionists, whose root comes from neuroscience. They have led this subfield of study to become what is commonly known as "deep learning" due to advances in network computation. Both Machine learning (ML) and deep learning (DL) are science fields derived from the discipline of Artificial Intelligence. [See more at: [6]](https://medium.com/42ai/the-5-tribes-of-the-ml-world-670ebce96b4c). Those subfields are generally composed of several techniques that are often referred to as _supervised_ or _unsupervised_, depending on if the training data includes the desired output (which corresponds to the first split) or not.
 
-### 1.4. Machine learning
+### 2.1. Machine learning on top of AWS
 According to the previous, machine learning _"is the name commonly applied to a number of Bayesian techniques used for pattern recognition and learning"_. [Taken from: [5]]. This is usually translated into a variety of algorithms that learn from historical data and make predictions based on it. Unlike typical computer code developed by software programmers, statistical models aim to return back a variable of interest based on patterns found in historical data rather than generating an output from a specific given input. Within an organization, ML is often following this lifecycle:
 
 ![Quicksight](./Images/ML.png)
 
+**Use cases** in which ML is applied include some of the following:
+* _Anomaly detection:_ to identify observations that do not comply with a expected pattern.
+* _Fraud detection:_ to identify potential fraudulent actions in industries such as banking or retail.
+* _Customer churn:_ to predict when customers are prone to leave a business and engage them through a specific marketing mix.
+* _Content personalization:_ where most of the product recommenders fit.
+
 ML or predictive analytics on top of AWS can be performed through different alternatives, depending on if teams look for predefined interfaces to deploy deep learning models or if they want to built machine learning models from scratch in a platform or application service. 
 
-#### 1.4.1. Frameworks and interfaces
+#### 2.1.1. Frameworks and interfaces
 * [AWS Deep Learning AMIs](https://aws.amazon.com/machine-learning/amis/):
 Amazon provides different machine images where pre-installed EC2 instances can be launched together with established common deep learning models such as TensorFlow, PyTorch, Apache MXNet, Chainer, Gluon, Horovod, and Keras that train either customized or pre-defined artificial intelligence models. Those Amazon Machine Images (AMIs) can be supported in Amazon Linux, Ubuntu and Windows 2016 versions. 
 
-Besides the deep learning framework support, this special AMIs accelerate the model traning phases by means of the following:
+   Besides the deep learning framework support, this special AMIs accelerate the model traning phases by means of the following:
 
 * **GPU Instances**: Amazon EC2 P3 instances can be configured with up to 8 NVIDIA® V100 Tensor Core GPUs and up to 100 Gbps of networking throughput, which speeds machine learning applications. Specifically, Amazon EC2 P3dn.24xlarge is the most recent machine within the P3 family. According to the vendor, _"Amazon EC2 P3 instances have been proven to reduce machine learning training times from days to minutes, as well as increase the number of simulations completed for high performance computing by 3-4x"._ [See more at [5]](https://aws.amazon.com/ec2/instance-types/p3/).
 * **Demanding computing CPUs**: the C5 family is part of the Amazon EC2 instances offered for running advanced compute-intensive workloads. These instances are powered by the Intel Xeon Platinum 8000 series (Skylake-SP) processor and a Turbo CPU clock speed of up to 3.5 GHz. Also, they can provide up to 25 Gbps of network bandwidth. [See more at [6]](https://aws.amazon.com/ec2/instance-types/c5/).
 * **Python and Anaconda**: both Jupyter notebooks and the Anaconda platform are straight away available for the installation of required packages and also to access their specific scientific computing tools such as Orange 3 and Spyder. [See more at [7]](https://www.anaconda.com/distribution/).
 
-#### 1.4.2. Platform services
+
+#### 2.1.2. Platform services
 * [Amazon SageMaker](https://aws.amazon.com/sagemaker/?nc2=h_a1) is the Amazon platform to build, train and deploy machine learning models into production environments. This tool, as well as the Deep Learning AMIs, automatically configures TensorFlow, Apache MXNet, PyTorch, Chainer, Scikit-learn, SparkML, Horovod, Keras, and Gluon frameworks, as well as hosted Jupyer notebooks, which altogether can host more than 200 pre-built trained models from the AWS marketplace and can also host any other algorithm or framework by building it into a Docker container. [See more at [8]](https://aws.amazon.com/sagemaker/?nc2=h_a1). Note, however, that they can connect to other EC2 Amazon instances that are not necessarily optimized for speeding up artificial intelligence or machine learning models, as happens in the case of the Amazon Deep Learning AMIs.
 
    One interesting feature to highlight has to do with an additional data labeling service that is offered together with Amazon SageMaker. It is called Amazon SageMaker Ground Truth and allows access to public and private human labelers that can accelerate the data labeling process and help in the automation of the labeling within the machine learning models in further stages. According to the [official documentation](https://aws.amazon.com/sagemaker/groundtruth/), Ground Truth has contributed to a 70% in the reduction of the costs associated to labeling in all the business cases it has been used. The whole functioning of the tool is as follows:
 
 ![SageMakerGround](./Images/Amazon-SageMaker-Ground-Truth.png)
 
-Also, note that this service is similar to the initial one provided by [Amazon Mechanical Turk](https://www.mturk.com/) Turk, which is an outsourcing crowdsourcing marketplace for different jobs and business processes.
+Also, note that this service is similar to the initial one provided by [Amazon Mechanical Turk](https://www.mturk.com/), which is an outsourcing crowdsourcing marketplace for different jobs and business processes.
 
-#### 1.4.3. External marketplace solutions
+#### 2.1.3. External marketplace solutions
 The [AWS Marketplace](https://aws.amazon.com/marketplace) puts together different external techonology products and services that can be integrated to the whole Amazon cloud computing ecosystem in the form of applications. Popular products in the marketplace are related to one of the following categories: operating systems, security, networking, storage, business intelligence, databases, DevOps and machine learning.
 
 Some popular examples within the business intelligence category are:
@@ -230,6 +258,42 @@ Similarly, for machine learning it is possible to find remarkable products such 
 * [**Databricks Unified Analytics Platform**](https://aws.amazon.com/marketplace/pp/B07K2NJKRW?qid=1556102162197&sr=0-10&ref_=srh_res_product_title): powered by the creators of Apache Spark and MLflow _"it provides data science and engineering teams ready-to-use clusters with optimized Apache Spark and various ML frameworks(e.g., TensorFlow) coupled with powerful collaboration capabilities to improve productivity across the ML lifecycle"_.
 * [**ML Workbench for TensorFlow**](https://aws.amazon.com/marketplace/pp/B07MFRDXTB?qid=1556102162197&sr=0-9&ref_=srh_res_product_title) provides a zero-admin solution that includes the architecture necessary to run machine learning jobs in an optimal way. It includes Ubuntu 18.04 with Jupyter, JupyterLab, TensorBoard and preconfigured conda environments for Tensorflow 1.13.1 and TensorFlow 2 Alpha including the latest matching versions of CUDA 10.0 and cuDNN 7.5.0 for GPU-accelerated computing.
 
-## 2. Artificial intelligence on top of AWS
+### 2.2. Deep learning on top of AWS
+Finally, it is important to acknowledge that the concept of _deep learning_ is also related to ML, as DL involves layering algorithms that often allow a greater understanding of the data. These algorithms, as opposed to classical ML models such as regressions, do not aim to create a explainable set of relationships between variables, but instead they are relying on their "_layers of non-linear algorithms to create distributed representations that interact based on a series of factors"_, which allows scientists to find more patterns than it is possible to code or even recognize and take them into consideration to train complex prediction models [See more at [9]](https://aws.amazon.com/machine-learning/what-is-ai/). Some of the use cases of deep learning include:
+
+#### 2.2.1. Image and video classification
+* [Amazon Rekognition](https://aws.amazon.com/rekognition/) is the tool that Amazon has built for including image and video analysis into applications. The Rekognition API and its service can identify objects, people, text, scenes, and activities, as well as any inappropriate content within a service. This tool also provides facial analysis, facial recognition and even celebrities recognition.
+   
+   The following graph depicts the general workflow of the tool:
+   ![Personalize](./Images/Amazon-Personalize.png)
+   
+   Some examples of the outputs generated from this API are:
+
+   ![Personalize1](./Images/Amazon-Personalize-1.png)
+   ![Personalize2](./Images/Amazon-Personalize-2.PNG)
+   ![Personalize3](./Images/Amazon-Personalize-3.PNG)
+
+#### 2.2.2. Speech recognition
+* [Amazon Polly](https://aws.amazon.com/polly/) is a Text-to-Speech service that synthesizes speeches through deep learning algorithms so that they sound like human voices and can enable speech-based products. Voices included in this tool are both male and female for more than 15 languages.
+
+   **Content creation** is also possible through Amazon Polly by adding speeches to media communication. The following is an use case in which an article is converted into a speech and then downloaded as MP3:
+   
+   ![AmazonPolly](./Images/Amazon-Polly-Use-Case.png)
+
+#### 2.2.3. Natural language processing
+* [Amazon Comprehend](https://aws.amazon.com/comprehend/) uses Natural Language Processing to find insights and patterns in text. Unstructured data coming from customer emails, support tickets, product reviews and social media can be analyzed through this service, which is useful to find key phrases, places, people, brands, or events. Moreover, sentiment analysis is also possible through the AutoML capabilities of the service that allow users to explore tailored machine learning solutions. 
+
+  Also, [Amazon Comprehend Medical](https://aws.amazon.com/comprehend/medical/) is the extended solution of this service to process complex medical information from unstructured text. Medical information such as _"medical conditions, medications, dosages, strengths, and frequencies from a variety of sources like doctor’s notes, clinical trial reports, and patient health records"_. [See more at [9]](https://aws.amazon.com/comprehend/).
+  
+  In general, Amazon Comprehend works as follows:
+  ![AmazonComprehend](./Images/Amazon-Comprehend.png)
+
+#### 2.2.4. Recommendation engines
+* [Amazon Personalize](https://aws.amazon.com/personalize/) is a tool to perform customer engagement by offering personalized product and content recommendations, tailored search results, and targeted marketing promotions. With only a stream provision of each particular business application, any additional information about the final customers and no prior ML knowledge, companies can access recommendations tunned by several algorithms, which allows them to use the most accurate one in each situation and reach their customers almost in real-time. The workflow of the tool is depicted as follows:
+
+![Personalize](./Images/Amazon-Personalize.png)
+
+   Companies such as Domino's, spuul and zola already use this app to provide personalized notifications.
+
 
 
