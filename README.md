@@ -8,7 +8,7 @@ Written by:
 - Introduction
 - Amazon Web Services in the era of _data science_
 - Data lakes and analytics on top of AWS
-  - [Data movement](#11-data-movement)
+  - [Data movement](1.1.-Data-movement)
     - On-premises data movement
     - Real-time data movement
   - Data lakes
@@ -295,5 +295,4 @@ Finally, it is important to acknowledge that the concept of _deep learning_ is a
 
    Companies such as Domino's, spuul and zola already use this app to provide personalized notifications.
 
-
-
+Additional Amazon AI services also include document analysis ([Amazon Textract](https://aws.amazon.com/textract/)), conversational agents ([Amazon Lex](https://aws.amazon.com/lex/)), translation ([Amazon Translate](https://aws.amazon.com/translate/)) and transcription ([Amazon Transcribe](https://aws.amazon.com/transcribe/)).
