@@ -245,7 +245,7 @@ Amazon provides different machine images where pre-installed EC2 instances can b
 ![SageMakerGround](./Images/Amazon-SageMaker-Ground-Truth.png)
 
    **Main disadvantages related to Amazon SageMaker**  
-   Amazon SageMaker has been released by the end of 2017, which makes it a relatively new service open to the market. Even though it has been graded with an average grade of 4.5 out of 5 by end users ([see more at [10]])(https://www.g2.com/products/amazon-sagemaker/reviews), some disadvantages have been addressed as well, such as:
+   Amazon SageMaker has been released by the end of 2017, which makes it a relatively new service open to the market. Even though it has been graded with an average grade of 4.5 out of 5 by end users ([see more at [10]](https://www.g2.com/products/amazon-sagemaker/reviews)), some disadvantages have been addressed as well, such as:
    
    * A less user-friendly interface for non-technical workers.
    * It lacks enough documentation that is publicly available.
@@ -289,7 +289,7 @@ Finally, it is important to acknowledge that the concept of _deep learning_ is a
    ![Personalize3](./Images/Amazon-Personalize-3.PNG)
       
    **Main critics related to Amazon Rekognition**  
-   In the past, this tool used to be compared against the Google Cloud Vision solution and seemed to be less powerful, as Amazon Rekognition did not use to detect logos and violent content, features that have been included into the product by January 2019. However, many still say that Google Cloud Vision has a better performance due to the training set it uses. [See more at: [11]](https://cloudacademy.com/blog/google-vision-vs-amazon-rekognition/).
+   Launched in 2016, this tool used to be compared against the Google Cloud Vision solution and seemed to be less powerful, as Amazon Rekognition did not use to detect logos and violent content, features that have been included into the product by January 2019. However, many still say that Google Cloud Vision has a better performance due to the training set it uses. [See more at: [11]](https://cloudacademy.com/blog/google-vision-vs-amazon-rekognition/).
    
    Another criticism made to Amazon Rekognition is related to the ethnic and gender bias it is claimed to have. According to MIT researchers, this tool has several issues recognizing black and asian people, with an average of 77% of accuracy compared to a 99% for white people ([see more at [12]](https://medium.com/@Joy.Buolamwini/response-racial-and-gender-bias-in-amazon-rekognition-commercial-ai-system-for-analyzing-faces-a289222eeced)). To illustrate this, the team found that according to the software, Oprah Winfrey is a male with 76.5% of likelihood. [See more at: [13]](https://medium.com/@Joy.Buolamwini/response-racial-and-gender-bias-in-amazon-rekognition-commercial-ai-system-for-analyzing-faces-a289222eeced). 
 
