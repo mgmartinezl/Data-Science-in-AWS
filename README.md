@@ -244,7 +244,7 @@ Finally, it is important to acknowledge that the concept of _deep learning_ is a
 
    **Content creation** is also possible through Amazon Polly by adding speeches to media communication. The following is an use case in which an article is converted into a speech and then downloaded as MP3:
    
-   ![AmazonPolly](./Images/Amazon-Polly-Use-Case.PNG)
+   ![AmazonPolly](./Images/Amazon-Polly-Use-Case.png)
 
 #### 2.2.3. Natural language processing
 * [Amazon Comprehend](https://aws.amazon.com/comprehend/) uses Natural Language Processing to find insights and patterns in text. Unstructured data coming from customer emails, support tickets, product reviews and social media can be analyzed through this service, which is useful to find key phrases, places, people, brands, or events. Moreover, sentiment analysis is also possible through the AutoML capabilities of the service that allow users to explore tailored machine learning solutions. 
@@ -252,7 +252,7 @@ Finally, it is important to acknowledge that the concept of _deep learning_ is a
   Also, [Amazon Comprehend Medical](https://aws.amazon.com/comprehend/medical/) is the extended solution of this service to process complex medical information from unstructured text. Medical information such as _"medical conditions, medications, dosages, strengths, and frequencies from a variety of sources like doctor’s notes, clinical trial reports, and patient health records"_. [See more at [9]](https://aws.amazon.com/comprehend/).
   
   In general, Amazon Comprehend works as follows:
-  ![AmazonComprehend](./Images/Amazon-Comprehend.PNG)
+  ![AmazonComprehend](./Images/Amazon-Comprehend.png)
 
 #### 2.2.4. Recommendation engines
 * [Amazon Personalize](https://aws.amazon.com/personalize/) is a tool to perform customer engagement by offering personalized product and content recommendations, tailored search results, and targeted marketing promotions. With only a stream provision of each particular business application, any additional information about the final customers and no prior ML knowledge, companies can access recommendations tunned by several algorithms, which allows them to use the most accurate one in each situation and reach their customers almost in real-time. The workflow of the tool is depicted as follows:
