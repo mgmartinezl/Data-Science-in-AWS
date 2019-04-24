@@ -284,6 +284,9 @@ Finally, it is important to acknowledge that the concept of _deep learning_ is a
    ![Personalize1](./Images/Amazon-Personalize-1.png)
    ![Personalize2](./Images/Amazon-Personalize-2.PNG)
    ![Personalize3](./Images/Amazon-Personalize-3.PNG)
+      
+   **Main critics related to Amazon Rekognition**  
+   In the past, this tool used to be compared against the Google Cloud Vision solution and seemed to be less powerful, as Amazon Rekognition did not use to detect logos and violent content, features that have been included into the product by January 2019. However, many still say that Google Cloud Vision has a better performance due to the training set it uses.
 
 #### 2.2.2. Speech recognition
 * [Amazon Polly](https://aws.amazon.com/polly/) is a Text-to-Speech service that synthesizes speeches through deep learning algorithms so that they sound like human voices and can enable speech-based products. Voices included in this tool are both male and female for more than 15 languages.
