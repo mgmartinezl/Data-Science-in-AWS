@@ -147,7 +147,16 @@ to everyone to the data they need, while only paying for what they use. This ser
 
 ![Quicksight](./Images/Amazon-Quicksight.png)
 
-### 1.4. Machine learning
+## 1.4. Introduction to Artificial Intelligence and Machine Learning
+Often abbreviated as "AI", _"Artificial Intelligence (AI) is the field of computer science dedicated to solving cognitive problems commonly associated with human intelligence, such as learning, problem solving, and pattern recognition"_. [Taken from: [5]](https://aws.amazon.com/machine-learning/what-is-ai/). 
+
+According to professor Pedro Domingos, a researcher of the field at University of Washington, there are five main _tribes_ that conform the Machine Learning. One of them is related to the Bayesians, people engaged with statistics and probability that have developed the field into different real-world applications thanks to the advancements in statistical computing, the reason why we can talk about "machine learning" for advanced bayesians techniques applied into use cases. 
+
+Moreover, another tribe within the machine learning paradigm is conformed by the connectionists, whose root comes from neuroscience. They have led this subfield of study to become what is today commonly known as "deep learning" due to advances in network computation. Therefore, both Machine learning (ML) and deep learning (DL) are science fields derived from the discipline of Artificial Intelligence. [See more at: [5]](https://aws.amazon.com/machine-learning/what-is-ai/). 
+
+### Machine learning
+According to Amazon, machine learning _"is the name commonly applied to a number of Bayesian techniques used for pattern recognition and learning"_
+
 Predictive analytics on top of AWS can be performed through different alternatives, depending on if teams look for predefined interfaces to deploy deep learning models or if they want to built machine learning models from scratch in a platform or application service. 
 
 #### 1.4.1. Frameworks and interfaces
