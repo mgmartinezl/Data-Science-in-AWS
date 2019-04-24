@@ -150,12 +150,17 @@ to everyone to the data they need, while only paying for what they use. This ser
 ![Quicksight](./Images/Amazon-Quicksight.png)
 
 ### 1.4. Machine learning
+Predictive analytics on top of AWS can be performed through different alternatives, depending on if teams look for predefined interfaces to deploy deep learning models or if they want to built machine learning models from scratch in a platform or application service. 
 
 #### 1.4.1. Frameworks and interfaces
+* [AWS Deep Learning AMIs](https://aws.amazon.com/machine-learning/amis/)
+Amazon provides different machine images where pre-installed EC2 instances can be launched together with established common deep learning models such as TensorFlow, PyTorch, Apache MXNet, Chainer, Gluon, Horovod, and Keras that train either customized or pre-defined artificial intelligence models. Those Amazon Machine Images (AMIs) can be supported in Amazon Linux, Ubuntu and Windows 2016 versions. 
 
 #### 1.4.2. Platform services
 
 #### 1.4.3. Application services
+
+#### 1.4.4. External marketplace solutions
 
 ## 2. Artificial intelligence on top of AWS
 
