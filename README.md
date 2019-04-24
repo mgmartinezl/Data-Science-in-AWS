@@ -180,9 +180,11 @@ Some popular examples within the business intelligence category are:
 * [**SAS University Edition**](https://aws.amazon.com/marketplace/pp/B00WH10IKW?qid=1556101797937&sr=0-3&ref_=brs_res_product_title) _"for teaching and learning statistics and quantitative methods"_.
 * [**Matillion ETL for Amazon Redshift**](https://aws.amazon.com/marketplace/pp/B010ED5YF8?qid=1556101797937&sr=0-1&ref_=brs_res_product_title) to build ETL/ELT pipelines oriented to data storage in Amazon Redshift.
 
-Similarly, for machine learning it is possible to find products such as:
-* [**H2O Driverless AI**](https://aws.amazon.com/marketplace/pp/B07JN71K8N?qid=1556102162197&sr=0-4&ref_=srh_res_product_title)
-
+Similarly, for machine learning it is possible to find remarkable products such as:
+* [**H2O Driverless AI**](https://aws.amazon.com/marketplace/pp/B07JN71K8N?qid=1556102162197&sr=0-4&ref_=srh_res_product_title), which is an artificial intelligence platform that automates machine learning workflows such as feature engineering, model validation, model tuning, model selection, model deployment and also data visualization. Moreover, according to their own description, the platform _"aims to achieve highest predictive accuracy, comparable to expert data scientists, but in much shorter time thanks to end-to-end automation,"_ something that could eventually put many employments within the data science industry at risk.
+* [**KNIME Server Small for AWS**] aims to deploy KNIME Analytics Platform within the Amazon cloud ecosystem to automate machine learning models and ETL/ELT workflows.
+* [**Databricks Unified Analytics Platform**](https://aws.amazon.com/marketplace/pp/B07K2NJKRW?qid=1556102162197&sr=0-10&ref_=srh_res_product_title): powered by the creators of Apache Spark and MLflow _"it provides data science and engineering teams ready-to-use clusters with optimized Apache Spark and various ML frameworks(e.g., TensorFlow) coupled with powerful collaboration capabilities to improve productivity across the ML lifecycle"_.
+* [**ML Workbench for TensorFlow**](https://aws.amazon.com/marketplace/pp/B07MFRDXTB?qid=1556102162197&sr=0-9&ref_=srh_res_product_title) provides a zero-admin solution that includes the architecture necessary to run machine learning jobs in an optimal way. It includes Ubuntu 18.04 with Jupyter, JupyterLab, TensorBoard and preconfigured conda environments for Tensorflow 1.13.1 and TensorFlow 2 Alpha including the latest matching versions of CUDA 10.0 and cuDNN 7.5.0 for GPU-accelerated computing.
 
 ## 2. Artificial intelligence on top of AWS
 
