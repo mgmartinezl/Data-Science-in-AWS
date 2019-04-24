@@ -15,7 +15,7 @@ Defining what data science is, is still a non-trivial task. One could say that t
   
 > _Data science is the civil engineering of data. Its acolytes possess a practical knowledge of tools and materials, coupled with a theoretical understanding of what’s possible"._
 
-The previous is a very illustrative definition of data science that leads us to think that in the end, data science is a science but also an art, in which the so well-known _data scientists_ **know more about statistics than a computer scientist and more about computer hacking than a statistician.** [See more at [1]](https://www.oreilly.com/library/view/doing-data-science/9781449363871/ch01.html)
+The previous is a very illustrative definition of data science that leads us to think that in the end, data science is a science but also an art, in which the so well-known _data scientists_ **know more about statistics than a computer scientist and more about computer hacking than a statistician.** [See more at [1]](https://www.oreilly.com/library/view/doing-data-science/9781449363871/ch01.html).
 
 Approximately by 2016, the _data scientist_ position was considered as the "sexiest" job of the 21st century. Apparently, this new role was top in many aspects: scarse, interesting and well-paid. But, why was that figure so important? and ultimately, why is the concept of **data science** so important? In a nutshell, data science matters because it helps us make better decisions and be more accurately prepared for the future. If we simply think about evolution, information leads to better decisions, and better decisions will make species live longer. As for a cooking recipe, a data scientist would be a chef that gathers and mix a set of previously well-known ingredients to produce new or better food. 
 
@@ -24,15 +24,16 @@ As a consequence, data science is the extension of the scientific method applied
 ![DS](./Images/DataScience-UseCases.png)  
 [Taken from: [2]](https://www.edureka.co/blog/what-is-data-science/)
 
-Therefore, as may be expected, tech leader companies around the world have been working hard on the democratization of this concept, so that many other businesses and corporations can benefit themselves by making better decisions through data. In fact, data science is a business in which useful knowledge is sold as the most valuable product, something that most companies are willing to pay, as we are now aware of the fact that wrong decisions cost much more in the long term. [See more at [3]](https://www.forbes.com/sites/falonfatemi/2016/09/28/the-true-cost-of-a-bad-hire-its-more-than-you-think/#421ce09d4aa4)
+Therefore, as may be expected, tech leader companies around the world have been working hard on the democratization of this concept, so that many other businesses and corporations can benefit themselves by making better decisions through data. In fact, data science is a business in which useful knowledge is sold as the most valuable product, something that most companies are willing to pay, as we are now aware of the fact that wrong decisions cost much more in the long term. [See more at [3]](https://www.forbes.com/sites/falonfatemi/2016/09/28/the-true-cost-of-a-bad-hire-its-more-than-you-think/#421ce09d4aa4).
 
 **Amazon Web Services in the era of _data science_**  
 Amazon Web Services is a whole ecosystem hosted by Amazon Inc. that offers on-demand cloud computing platforms to individuals, companies and governments through a pay-as-you-go basis. Also known as "AWS", this framework makes possible for its customers to access a variety of services in which data science utilities are included. The purpose of this brief repository is to approach the main products that AWS has disposed to perform _data science_, a concept that for the scope of this project will gather the following key topics:
   
-* Data lakes
-* Data analytics
-* Machine learning
-* Artificial intelligence
+* Data lakes.
+* Data analytics.
+* Data visualization.
+* Machine learning.
+* Artificial intelligence.
 
 ## 1. Data lakes, machine learning and analytics on top of AWS
 
@@ -64,22 +65,21 @@ Using AWS services for analytics or machine learning, requires first having the 
 
 * [AWS IoT Core](https://aws.amazon.com/iot-core/?nc2=h_iot) is aanother real-time data capturing solution that focuses on Internet of Things devices data. This tool can connect billions of devices between them and also to other external endpoints or devices that use additional AWS services, such as AWS Lambda, Amazon Kinesis, Amazon S3, Amazon SageMaker, Amazon DynamoDB, Amazon CloudWatch, AWS CloudTrail, and Amazon QuickSight. Additionally, these apps can track the connected devices 100% of the time, even if they are not connected because the app _"stores the latest state of a connected device so that it can be read or set at anytime, making the device appear to your applications as if it were online all the time"_. The logic behind this concept is as shown:
 
-**First, connect devices:**
-![Connect](./Images/AWS-IoT-connect.png)
+   **First, connect devices:**
+   ![Connect](./Images/AWS-IoT-connect.png)
 
-**Second, secure connections and data:**
-![Secure](./Images/AWS-IoT-secure.png)
+   **Second, secure connections and data:**
+   ![Secure](./Images/AWS-IoT-secure.png)
 
-**Third, process collected data** according to predefined business rules:
-![Process](./Images/AWS-IoT-process.png)
+   **Third, process collected data** according to predefined business rules:
+   ![Process](./Images/AWS-IoT-process.png)
 
-### 1.2. Data lakes (Charlie)
-
+### 1.2. Data lakes
+  
 The paradigm of having Data lakes with raw structured and unstructured data is becoming the standard within the industry, because they allow storing the data coming from a wide set of sources in its most natural form so we can build Analytic views on the top.
 
 Some use cases within industry of data going into the lake are log files data from click-streams, social media, internet connected devices. Meanwhile the future analysis to be done from this data could answer the needs of attracting and retaining customers, improving productivity, plan appropriate maintenance, make informed decisions.
   
-
 AWS offers the data lake solution that automatically configures core AWS services to generate a data lake architecture on the AWS Cloud. This solution have the following architecture:
 
 ![Architecture](./Images/Architecture-Diagram_Data-Lake-on-AWS.png)
@@ -107,14 +107,14 @@ The AWS solution provide access to the following data lake microservices:
 
 All the previous microservices use [AWS Lambda](https://aws.amazon.com/lambda/) as the provisioner of the back-end services that can be consumed through a CLI or through the web console deployed as part of the solution. Some advantages of AWS Lambda are: avoid the use and management of servers and the continuous scaling of the application by running each code request in parallel.
 
-#### 1.2.2. Object storage (Charlie)
+#### 1.2.2. Object storage 
 
 In a data lake the structure of the data or schema is not defined when data is captured. In fact, We can store data without considering design or caring about the information we must extract from this data in the future.
 
 The AWS data lake solution stores and registers datasets and manifest files of any size in their native form in an [Amazon S3](https://aws.amazon.com/s3/) bucket.
 A second S3 bucket configured for static website hosting hosts the data lake console which is exposed via the [Amazon CloudFront](https://aws.amazon.com/cloudfront/) to avoid direct access through the S3 endpoint.
 
-#### 1.2.3. Data catalog (Charlie)
+#### 1.2.3. Data catalog 
 
 When we work with data lakes there is a complexity added as there is not oversight of the contents. Therefore it is important to track the metadata.
 The data lake solution uses __Amazon DynamoDB__ tables to persist metadata for the data packages, settings, and user cart items. The following tables are available:
@@ -126,29 +126,36 @@ The data lake solution uses __Amazon DynamoDB__ tables to persist metadata for t
 - __data-lake-keys:__ persistent store for user access key ID references
 - __data-lake-settings:__ persistent store for data lake configuration and governance settings
 
-Additionally this solution automatically configures an AWS Glue crawler within each data package and schedules a daily scan to keep track of the changes.
+Additionally this solution automatically configures an [AWS Glue crawler]() within each data package and schedules a daily scan to keep track of the changes.
 The crawlers crawl through the datasets and inspect portions of them to infer a data schema and persist the output as one or more metadata tables that are defined in the AWS Glue Data Catalog.
-__AWS Glue__ provides built-in classifiers to infer schemas from common files with formats that include JSON, CSV, and Apache Avro.
 
-#### 1.2.4. Security management
+#### 1.2.4. ETL process 
+
+[AWS Glue](https://aws.amazon.com/glue/) is an ETL service that make easier the preparation of data for analytics. 
+AWS Glue provides built-in classifiers to infer schemas from common files with formats that include JSON, CSV, Parquet, Apache Avro and more.
+
+This services works very easily following 3 simple steps:
+
+ 1. Build your catalog: Pointing a crawler into data stored on AWS and then it discovers the data and stores the appropriate metadata in the AWS Glue Data Catalog.
+ 2. Generate and Edit Transformations: By selecting a data source and data target. AWS Glue will generate ETL code in Scala or Python to extract data from the source, transform the data to match the target schema, and load it into the target.
+ 3. Schedule and Run Your Jobs: Schedule recurring ETL jobs or chain them or invoke them on-demand.
+
+
+#### 1.2.5. Security management
 
 The security on a data lake is very important because the data stored inside might be very sensitive and the access allowed to each user need to be controlled. Therefore all the dataset objects stored in [AWS S3](https://aws.amazon.com/s3/) are encrypted using the [AWS KMS Key](https://aws.amazon.com/kms/) service. This security will be handled through [Amazon cognito](https://aws.amazon.com/cognito/) which will work as the authentication media for the different users of the data lake.  
 
 
-#### 1.2.5. Indexing management
+#### 1.2.6. Indexing management
 
 The solution uses an [Amazon Elasticsearch Service](https://aws.amazon.com/elasticsearch-service/) cluster to index data lake package data for searching. 
 
-
 [Taken from: [4]](https://docs.aws.amazon.com/solutions/latest/data-lake-solution/appendix-b.html)  
-
-
-
 
 ### 1.3. Analytics
 
 #### 1.3.1. Interactive analytics
-* [Amazon Athena](https://aws.amazon.com/athena/) is a platform to query data stored in Amazon S3 through standard SQL, once a schema has been defined. Moreover, Athena is a serverless tool, so no infrastructure costs are associated with the use of the service and it only charges final users for the queries they run. Besides this, no ETL processes need to be defined prior to start querying data. Also, Amazon Athena is integrated with AWS Glue Data Catalog, which allows users create unified metadata repositories available across all the Amazon suite of products and also schema versioning
+* [Amazon Athena](https://aws.amazon.com/athena/) is a platform to query data stored in Amazon S3 through standard SQL, once a schema has been defined. Moreover, Athena is a serverless tool, so no infrastructure costs are associated with the use of the service and it only charges final users for the queries they run. Besides this, no ETL processes need to be defined prior to start querying data. Also, Amazon Athena is integrated with AWS Glue Data Catalog, which allows users create unified metadata repositories available across all the Amazon suite of products and also schema versioning.
 
 #### 1.3.2. Big data processing
 * [Amazon EMR](https://aws.amazon.com/emr/) provides big data processing capabilities by enabling the use of frameworks such as Spark and MapReduce and more than 19 open source projects that include Presto, Hive, HBase and Flink, which can also be connected to Amazon S3 or DynamoDB. Amazon EMR operates through notebooks based on the Jupyter interface and allows users create ad hoc queries, exploratory analysis, ETLs, machine learning, log analysis, web indexing amongst others.
@@ -175,13 +182,53 @@ to everyone to the data they need, while only paying for what they use. This ser
 
 ![Quicksight](./Images/Amazon-Quicksight.png)
 
+## Introduction to Artificial Intelligence and Machine Learning
+Often abbreviated as "AI", _"Artificial Intelligence (AI) is the field of computer science dedicated to solving cognitive problems commonly associated with human intelligence, such as learning, problem solving, and pattern recognition"_. [Taken from: [5]].(https://aws.amazon.com/machine-learning/what-is-ai/). 
+
+According to professor Pedro Domingos, a researcher of the field at University of Washington, there are five main _tribes_ that conform the Machine Learning. One of them is related to the Bayesians, people engaged with statistics and probability that have developed the field into different real-world applications thanks to the advancements in statistical computing, the reason why we can talk about "machine learning" for advanced bayesians techniques applied into use cases. 
+
+Moreover, another tribe within the machine learning paradigm is conformed by the connectionists, whose root comes from neuroscience. They have led this subfield of study to become what is commonly known as "deep learning" due to advances in network computation. Both Machine learning (ML) and deep learning (DL) are science fields derived from the discipline of Artificial Intelligence. [See more at: [6]](https://medium.com/42ai/the-5-tribes-of-the-ml-world-670ebce96b4c). Those subfields are generally composed of several techniques that are often referred to as _supervised_ or _unsupervised_, depending on if the training data includes the desired output (which corresponds to the first split) or not.
+
 ### 1.4. Machine learning
+According to the previous, machine learning _"is the name commonly applied to a number of Bayesian techniques used for pattern recognition and learning"_. [Taken from: [5]]. This is usually translated into a variety of algorithms that learn from historical data and make predictions based on it. Unlike typical computer code developed by software programmers, statistical models aim to return back a variable of interest based on patterns found in historical data rather than generating an output from a specific given input. Within an organization, ML is often following this lifecycle:
+
+![Quicksight](./Images/ML.png)
+
+ML or predictive analytics on top of AWS can be performed through different alternatives, depending on if teams look for predefined interfaces to deploy deep learning models or if they want to built machine learning models from scratch in a platform or application service. 
 
 #### 1.4.1. Frameworks and interfaces
+* [AWS Deep Learning AMIs](https://aws.amazon.com/machine-learning/amis/):
+Amazon provides different machine images where pre-installed EC2 instances can be launched together with established common deep learning models such as TensorFlow, PyTorch, Apache MXNet, Chainer, Gluon, Horovod, and Keras that train either customized or pre-defined artificial intelligence models. Those Amazon Machine Images (AMIs) can be supported in Amazon Linux, Ubuntu and Windows 2016 versions. 
+
+Besides the deep learning framework support, this special AMIs accelerate the model traning phases by means of the following:
+
+* **GPU Instances**: Amazon EC2 P3 instances can be configured with up to 8 NVIDIA® V100 Tensor Core GPUs and up to 100 Gbps of networking throughput, which speeds machine learning applications. Specifically, Amazon EC2 P3dn.24xlarge is the most recent machine within the P3 family. According to the vendor, _"Amazon EC2 P3 instances have been proven to reduce machine learning training times from days to minutes, as well as increase the number of simulations completed for high performance computing by 3-4x"._ [See more at [5]](https://aws.amazon.com/ec2/instance-types/p3/).
+* **Demanding computing CPUs**: the C5 family is part of the Amazon EC2 instances offered for running advanced compute-intensive workloads. These instances are powered by the Intel Xeon Platinum 8000 series (Skylake-SP) processor and a Turbo CPU clock speed of up to 3.5 GHz. Also, they can provide up to 25 Gbps of network bandwidth. [See more at [6]](https://aws.amazon.com/ec2/instance-types/c5/).
+* **Python and Anaconda**: both Jupyter notebooks and the Anaconda platform are straight away available for the installation of required packages and also to access their specific scientific computing tools such as Orange 3 and Spyder. [See more at [7]](https://www.anaconda.com/distribution/).
 
 #### 1.4.2. Platform services
+* [Amazon SageMaker](https://aws.amazon.com/sagemaker/?nc2=h_a1) is the Amazon platform to build, traing and deploy machine learning models into production environments. This tool, as well as the Deep Learning AMIs, automatically configures TensorFlow, Apache MXNet, PyTorch, Chainer, Scikit-learn, SparkML, Horovod, Keras, and Gluon frameworks, as well as hosted Jupyer notebooks, which altogether can host more than 200 pre-built trained models from the AWS marketplace and can also host any other algorithm or framework by building it into a Docker container. [See more at [8]](https://aws.amazon.com/sagemaker/?nc2=h_a1). Note, however, that they can connect to other EC2 Amazon instances that are not necessarily optimized for speeding up artificial intelligence or machine learning models, as happens in the case of the Amazon Deep Learning AMIs.
 
-#### 1.4.3. Application services
+   One interesting feature to highlight has to do with an additional data labeling service that is offered together with Amazon SageMaker. It is called Amazon SageMaker Ground Truth and allows access to public and private human labelers that can accelerate the data labeling process and help in the automation of the labeling within the machine learning models in further stages. According to the [official documentation](https://aws.amazon.com/sagemaker/groundtruth/), Ground Truth has contributed to a 70% in the reduction of the costs associated to labeling in all the business cases it has been used. The whole functioning of the tool is as follows:
+
+![SageMakerGround](./Images/Amazon-SageMaker-Ground-Truth.png)
+
+Also, note that this service is similar to the initial one provided by [Amazon Mechanical Turk](https://www.mturk.com/) Turk, which is an outsourcing crowdsourcing marketplace for different jobs and business processes.
+
+#### 1.4.3. External marketplace solutions
+The [AWS Marketplace](https://aws.amazon.com/marketplace) puts together different external techonology products and services that can be integrated to the whole Amazon cloud computing ecosystem in the form of applications. Popular products in the marketplace are related to one of the following categories: operating systems, security, networking, storage, business intelligence, databases, DevOps and machine learning.
+
+Some popular examples within the business intelligence category are:
+* [**Tableau Server**](https://aws.amazon.com/marketplace/pp/B00ZYOIFLS?qid=1556101797937&sr=0-5&ref_=brs_res_product_title) for device-agnostic visual analytics.
+* [**Qliksense Enterprise**](https://aws.amazon.com/marketplace/pp/B01M5HCC0D?qid=1556101797937&sr=0-9&ref_=brs_res_product_title), also for building business intelligence and reporting dashboards.
+* [**SAS University Edition**](https://aws.amazon.com/marketplace/pp/B00WH10IKW?qid=1556101797937&sr=0-3&ref_=brs_res_product_title) _"for teaching and learning statistics and quantitative methods"_.
+* [**Matillion ETL for Amazon Redshift**](https://aws.amazon.com/marketplace/pp/B010ED5YF8?qid=1556101797937&sr=0-1&ref_=brs_res_product_title) to build ETL/ELT pipelines oriented to data storage in Amazon Redshift.
+
+Similarly, for machine learning it is possible to find remarkable products such as:
+* [**H2O Driverless AI**](https://aws.amazon.com/marketplace/pp/B07JN71K8N?qid=1556102162197&sr=0-4&ref_=srh_res_product_title), which is an artificial intelligence platform that automates machine learning workflows such as feature engineering, model validation, model tuning, model selection, model deployment and also data visualization. Moreover, according to their own description, the platform _"aims to achieve highest predictive accuracy, comparable to expert data scientists, but in much shorter time thanks to end-to-end automation,"_ something that could eventually put many employments within the data science industry at risk.
+* [**KNIME Server Small for AWS**](https://aws.amazon.com/marketplace/pp/B07JH2TGJV?qid=1556102162197&sr=0-7&ref_=srh_res_product_title) aims to deploy KNIME Analytics Platform within the Amazon cloud ecosystem to automate machine learning models and ETL/ELT workflows.
+* [**Databricks Unified Analytics Platform**](https://aws.amazon.com/marketplace/pp/B07K2NJKRW?qid=1556102162197&sr=0-10&ref_=srh_res_product_title): powered by the creators of Apache Spark and MLflow _"it provides data science and engineering teams ready-to-use clusters with optimized Apache Spark and various ML frameworks(e.g., TensorFlow) coupled with powerful collaboration capabilities to improve productivity across the ML lifecycle"_.
+* [**ML Workbench for TensorFlow**](https://aws.amazon.com/marketplace/pp/B07MFRDXTB?qid=1556102162197&sr=0-9&ref_=srh_res_product_title) provides a zero-admin solution that includes the architecture necessary to run machine learning jobs in an optimal way. It includes Ubuntu 18.04 with Jupyter, JupyterLab, TensorBoard and preconfigured conda environments for Tensorflow 1.13.1 and TensorFlow 2 Alpha including the latest matching versions of CUDA 10.0 and cuDNN 7.5.0 for GPU-accelerated computing.
 
 ## 2. Artificial intelligence on top of AWS
 
