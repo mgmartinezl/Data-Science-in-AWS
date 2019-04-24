@@ -82,16 +82,13 @@ AWS offers the data lake solution that automatically configures core AWS service
 
 This solution implements a data lake API, through Amazon API Gateway to provide access to the following data lake microservices:
 
-- __Admin Microservice__ handles administrative services including user and group management, settings, settings, API keys, and role authorization for all operations within the data lake.
-
-- __Cart Microservice__ handles all cart operations including item lists, adding items, removing items, and generating manifests for user carts.
-
-- __Manifest Microservice__ uploads import manifest files, which allows existing Amazon S3 content to be bulk imported into a package.
-
-- __Package Microservice__ handles all package operations including list, add package, remove package, update package, list metadata, add metadata, update metadata, list datasets, add dataset, remove dataset, process manifest, run AWS Glue on-demand crawler, list and access AWS Glue tables, and view dataset on Amazon Athena
-- __Search Microservice__ handles all search operations including query, index document, and remove indexed document.
-- __Profile Microservice__ Handles all profile operations for data lake users, including get and generate secret access key.
-- __Logging Microservice__ interfaces between the data lake microservices and Amazon CloudWatch Logs.
+- __Admin microservice__ handles administrative services including user and group management, settings, settings, API keys, and role authorization for all operations within the data lake.
+- __Cart microservice__ handles all cart operations including item lists, adding items, removing items, and generating manifests for user carts.
+- __Manifest microservice__ uploads import manifest files, which allows existing Amazon S3 content to be bulk imported into a package.
+- __Package microservice__ handles all package operations including list, add package, remove package, update package, list metadata, add metadata, update metadata, list datasets, add dataset, remove dataset, process manifest, run AWS Glue on-demand crawler, list and access AWS Glue tables, and view dataset on Amazon Athena
+- __Search microservice__ handles all search operations including query, index document, and remove indexed document.
+- __Profile microservice__ Handles all profile operations for data lake users, including get and generate secret access key.
+- __Logging microservice__ interfaces between the data lake microservices and Amazon CloudWatch Logs.
 
 Finally, the solution uses an Amazon Elasticsearch Service cluster to index data lake package data for searching. 
 
@@ -117,12 +114,12 @@ The data lake solution uses Amazon DynamoDB tables to persist metadata for the d
 Additionally this solution automatically configures an AWS Glue crawler within each data package and schedules a daily scan to keep track of the changes.
 The crawlers crawl through the datasets and inspect portions of them to infer a data schema and persist the output as one or more metadata tables that are defined in the AWS Glue Data Catalog.
 __AWS Glue__ provides built-in classifiers to infer schemas from common files with formats that include JSON, CSV, and Apache Avro.
-[See more at: [4]](https://docs.aws.amazon.com/solutions/latest/data-lake-solution/appendix-b.html)  
+[See more at: [4]](https://docs.aws.amazon.com/solutions/latest/data-lake-solution/appendix-b.html).
 
 ### 1.3. Analytics
 
 #### 1.3.1. Interactive analytics
-* [Amazon Athena](https://aws.amazon.com/athena/) is a platform to query data stored in Amazon S3 through standard SQL, once a schema has been defined. Moreover, Athena is a serverless tool, so no infrastructure costs are associated with the use of the service and it only charges final users for the queries they run. Besides this, no ETL processes need to be defined prior to start querying data. Also, Amazon Athena is integrated with AWS Glue Data Catalog, which allows users create unified metadata repositories available across all the Amazon suite of products and also schema versioning
+* [Amazon Athena](https://aws.amazon.com/athena/) is a platform to query data stored in Amazon S3 through standard SQL, once a schema has been defined. Moreover, Athena is a serverless tool, so no infrastructure costs are associated with the use of the service and it only charges final users for the queries they run. Besides this, no ETL processes need to be defined prior to start querying data. Also, Amazon Athena is integrated with AWS Glue Data Catalog, which allows users create unified metadata repositories available across all the Amazon suite of products and also schema versioning.
 
 #### 1.3.2. Big data processing
 * [Amazon EMR](https://aws.amazon.com/emr/) provides big data processing capabilities by enabling the use of frameworks such as Spark and MapReduce and more than 19 open source projects that include Presto, Hive, HBase and Flink, which can also be connected to Amazon S3 or DynamoDB. Amazon EMR operates through notebooks based on the Jupyter interface and allows users create ad hoc queries, exploratory analysis, ETLs, machine learning, log analysis, web indexing amongst others.
@@ -182,7 +179,7 @@ Some popular examples within the business intelligence category are:
 
 Similarly, for machine learning it is possible to find remarkable products such as:
 * [**H2O Driverless AI**](https://aws.amazon.com/marketplace/pp/B07JN71K8N?qid=1556102162197&sr=0-4&ref_=srh_res_product_title), which is an artificial intelligence platform that automates machine learning workflows such as feature engineering, model validation, model tuning, model selection, model deployment and also data visualization. Moreover, according to their own description, the platform _"aims to achieve highest predictive accuracy, comparable to expert data scientists, but in much shorter time thanks to end-to-end automation,"_ something that could eventually put many employments within the data science industry at risk.
-* [**KNIME Server Small for AWS**] aims to deploy KNIME Analytics Platform within the Amazon cloud ecosystem to automate machine learning models and ETL/ELT workflows.
+* [**KNIME Server Small for AWS**](https://aws.amazon.com/marketplace/pp/B07JH2TGJV?qid=1556102162197&sr=0-7&ref_=srh_res_product_title) aims to deploy KNIME Analytics Platform within the Amazon cloud ecosystem to automate machine learning models and ETL/ELT workflows.
 * [**Databricks Unified Analytics Platform**](https://aws.amazon.com/marketplace/pp/B07K2NJKRW?qid=1556102162197&sr=0-10&ref_=srh_res_product_title): powered by the creators of Apache Spark and MLflow _"it provides data science and engineering teams ready-to-use clusters with optimized Apache Spark and various ML frameworks(e.g., TensorFlow) coupled with powerful collaboration capabilities to improve productivity across the ML lifecycle"_.
 * [**ML Workbench for TensorFlow**](https://aws.amazon.com/marketplace/pp/B07MFRDXTB?qid=1556102162197&sr=0-9&ref_=srh_res_product_title) provides a zero-admin solution that includes the architecture necessary to run machine learning jobs in an optimal way. It includes Ubuntu 18.04 with Jupyter, JupyterLab, TensorBoard and preconfigured conda environments for Tensorflow 1.13.1 and TensorFlow 2 Alpha including the latest matching versions of CUDA 10.0 and cuDNN 7.5.0 for GPU-accelerated computing.
 
