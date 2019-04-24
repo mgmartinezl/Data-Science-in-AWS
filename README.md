@@ -140,9 +140,7 @@ The security on a data lake is very important because the data stored inside mig
 
 #### 1.2.6. Indexing management
 
-The solution uses an [Amazon Elasticsearch Service](https://aws.amazon.com/elasticsearch-service/) cluster to index data lake package data for searching. 
-
-[Taken from: [4]](https://docs.aws.amazon.com/solutions/latest/data-lake-solution/appendix-b.html)  
+The solution uses an [Amazon Elasticsearch Service](https://aws.amazon.com/elasticsearch-service/) cluster to index data lake package data for searching. [See more at [4]](https://docs.aws.amazon.com/solutions/latest/data-lake-solution/appendix-b.html).
 
 ### 1.3. Analytics
 
@@ -186,6 +184,12 @@ According to the previous, machine learning _"is the name commonly applied to a 
 
 ![Quicksight](./Images/ML.png)
 
+**Use cases** in which ML is applied include some of the following:
+* _Anomaly detection:_ to identify observations that do not comply with a expected pattern.
+* _Fraud detection:_ to identify potential fraudulent actions in industries such as banking or retail.
+* _Customer churn:_ to predict when customers are prone to leave a business and engage them through a specific marketing mix.
+* _Content personalization:_ where most of the product recommenders fit.
+
 ML or predictive analytics on top of AWS can be performed through different alternatives, depending on if teams look for predefined interfaces to deploy deep learning models or if they want to built machine learning models from scratch in a platform or application service. 
 
 #### 1.4.1. Frameworks and interfaces
@@ -205,7 +209,7 @@ Besides the deep learning framework support, this special AMIs accelerate the mo
 
 ![SageMakerGround](./Images/Amazon-SageMaker-Ground-Truth.png)
 
-Also, note that this service is similar to the initial one provided by [Amazon Mechanical Turk](https://www.mturk.com/) Turk, which is an outsourcing crowdsourcing marketplace for different jobs and business processes.
+Also, note that this service is similar to the initial one provided by [Amazon Mechanical Turk](https://www.mturk.com/), which is an outsourcing crowdsourcing marketplace for different jobs and business processes.
 
 #### 1.4.3. External marketplace solutions
 The [AWS Marketplace](https://aws.amazon.com/marketplace) puts together different external techonology products and services that can be integrated to the whole Amazon cloud computing ecosystem in the form of applications. Popular products in the marketplace are related to one of the following categories: operating systems, security, networking, storage, business intelligence, databases, DevOps and machine learning.
@@ -221,6 +225,13 @@ Similarly, for machine learning it is possible to find remarkable products such 
 * [**KNIME Server Small for AWS**](https://aws.amazon.com/marketplace/pp/B07JH2TGJV?qid=1556102162197&sr=0-7&ref_=srh_res_product_title) aims to deploy KNIME Analytics Platform within the Amazon cloud ecosystem to automate machine learning models and ETL/ELT workflows.
 * [**Databricks Unified Analytics Platform**](https://aws.amazon.com/marketplace/pp/B07K2NJKRW?qid=1556102162197&sr=0-10&ref_=srh_res_product_title): powered by the creators of Apache Spark and MLflow _"it provides data science and engineering teams ready-to-use clusters with optimized Apache Spark and various ML frameworks(e.g., TensorFlow) coupled with powerful collaboration capabilities to improve productivity across the ML lifecycle"_.
 * [**ML Workbench for TensorFlow**](https://aws.amazon.com/marketplace/pp/B07MFRDXTB?qid=1556102162197&sr=0-9&ref_=srh_res_product_title) provides a zero-admin solution that includes the architecture necessary to run machine learning jobs in an optimal way. It includes Ubuntu 18.04 with Jupyter, JupyterLab, TensorBoard and preconfigured conda environments for Tensorflow 1.13.1 and TensorFlow 2 Alpha including the latest matching versions of CUDA 10.0 and cuDNN 7.5.0 for GPU-accelerated computing.
+
+Finally, is important to acknowledge that the concept of _deep learning_ is also related to ML, as DL involves layering algorithms that often allow a greater understanding of the data. These algorithms, as opposed to classical ML models such as regressions, do not aim to create a explainable set of relationships between variables, but instead they are relying on their "_layers of non-linear algorithms to create distributed representations that interact based on a series of factors"_, which allows scientists to find more patterns than it is possible to code or even recognize and take them into consideration to train complex prediction models [See more at [9]](https://aws.amazon.com/machine-learning/what-is-ai/). Some of the use cases of deep learning include:
+
+* Image and video classification.
+* Speech recognition.
+* Natural language processing.
+* Recommender engines.
 
 ## 2. Artificial intelligence on top of AWS
 
