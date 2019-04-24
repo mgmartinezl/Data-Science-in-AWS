@@ -5,36 +5,36 @@ Written by:
 **Gabriela Martinez**  
 
 ## Table of Contents
-- [Introduction: : what is *_data science_* and why is it important?](#introduction-what-is-data-science-and-why-is-it-important)
-- [Amazon Web Services in the era of _data science_]()
-- [Data lakes and analytics on top of AWS](#1-data-lakes-and-analytics-on-top-of-aws)
+- Introduction: : what is *_data science_* and why is it important?
+- Amazon Web Services in the era of _data science_
+- Data lakes and analytics on top of AWS
   - [Data movement](#11-data-movement)
     - [On-premises data movement](#111-real-time-data-movement)
-    - [Real-time data movement](#111-real-time-data-movement)
-  - [Data lakes](#12-data-lakes)
-    - [Service management](#121-service-management)
-    - [Object storage](#122-object-storage)
-    - [Data catalog](#123-data-catalog)
-    - [ETL process](#124-etl-process)
-    - [Security management](#125-security-management)
-    - [Indexing management](#126-indexing-management)
-  - [Analytics](#13-analytics)
-    - [Interactive analytics](#131-interactive-analytics)
-    - [Big data processing](#132-big-data-processing)
-    - [Data warehousing](#133-data-warehousing)
-    - [Real-time analytics](#134-real-time-analytics)
-    - [Operational analytics](#135-operational-analytics)
-    - [Visualization](#136-visualization)
-- [Introduction to Artificial Intelligence, Machine Learning and Deep Learning](#2-introduction-to-artificial-intelligence-machine-learning-and-deep-learning)
-  - [Machine learning on top of AWS](#21-machine-learning-on-top-of-aws)
-    - [Frameworks and interfaces](#211-frameworks-and-interfaces)
-    - [Platform services](#212-platform-services)
-    - [External marketplace solutions](#213-external-marketplace-solutions)
-  - [Deep learning on top of AWS](#22-deep-learning-on-top-of-aws)
-    - [Image and video classification](#221-image-and-video-classification)
-    - [Speech recognition](#222-speech-recognition)
-    - [Natural language processing](#223-natural-language-processing)
-    - [Recommendation engines](#224-recommendation-engines)
+    - Real-time data movement
+  - Data lakes
+    - Service management
+    - Object storage 
+    - Data catalog
+    - ETL process 
+    - Security management
+    - Indexing management
+  - Analytics
+    - Interactive analytics
+    - Big data processing
+    - Data warehousing
+    - Real-time analytics
+    - Operational analytics
+    - Visualization
+- Introduction to Artificial Intelligence, Machine Learning and Deep Learning
+  - Machine learning on top of AWS
+    - Frameworks and interfaces
+    - Platform services
+    - External marketplace solutions
+  - Deep learning on top of AWS
+    - Image and video classification
+    - Speech recognition
+    - Natural language processing
+    - Recommendation engines
   
  ***
 
@@ -60,7 +60,7 @@ As a consequence, data science is the extension of the scientific method applied
 
 Therefore, as may be expected, tech leader companies around the world have been working hard on the democratization of this concept, so that many other businesses and corporations can benefit themselves by making better decisions through data. In fact, data science is a business in which useful knowledge is sold as the most valuable product, something that most companies are willing to pay, as we are now aware of the fact that wrong decisions cost much more in the long term. [See more at [3]](https://www.forbes.com/sites/falonfatemi/2016/09/28/the-true-cost-of-a-bad-hire-its-more-than-you-think/#421ce09d4aa4).
 
-#### Amazon Web Services in the era of _data science_  
+**Amazon Web Services in the era of _data science_**  
 Amazon Web Services is a whole ecosystem hosted by Amazon Inc. that offers on-demand cloud computing platforms to individuals, companies and governments through a pay-as-you-go basis. Also known as "AWS", this framework makes possible for its customers to access a variety of services in which data science utilities are included. The purpose of this brief repository is to approach the main products that AWS has disposed to perform _data science_, a concept that for the scope of this project will gather the following key topics:
   
 * Data lakes.
@@ -237,11 +237,23 @@ Amazon provides different machine images where pre-installed EC2 instances can b
 #### 2.1.2. Platform services
 * [Amazon SageMaker](https://aws.amazon.com/sagemaker/?nc2=h_a1) is the Amazon platform to build, train and deploy machine learning models into production environments. This tool, as well as the Deep Learning AMIs, automatically configures TensorFlow, Apache MXNet, PyTorch, Chainer, Scikit-learn, SparkML, Horovod, Keras, and Gluon frameworks, as well as hosted Jupyer notebooks, which altogether can host more than 200 pre-built trained models from the AWS marketplace and can also host any other algorithm or framework by building it into a Docker container. [See more at [8]](https://aws.amazon.com/sagemaker/?nc2=h_a1). Note, however, that they can connect to other EC2 Amazon instances that are not necessarily optimized for speeding up artificial intelligence or machine learning models, as happens in the case of the Amazon Deep Learning AMIs.
 
-   One interesting feature to highlight has to do with an additional data labeling service that is offered together with Amazon SageMaker. It is called Amazon SageMaker Ground Truth and allows access to public and private human labelers that can accelerate the data labeling process and help in the automation of the labeling within the machine learning models in further stages. According to the [official documentation](https://aws.amazon.com/sagemaker/groundtruth/), Ground Truth has contributed to a 70% in the reduction of the costs associated to labeling in all the business cases it has been used. The whole functioning of the tool is as follows:
+   One interesting feature to highlight has to do with an additional data labeling service that is offered together with Amazon SageMaker. It is called Amazon SageMaker Ground Truth and allows access to public and private human labelers that can accelerate the data labeling process and help in the automation of the labeling within the machine learning models in further stages. According to the [official documentation](https://aws.amazon.com/sagemaker/groundtruth/), Ground Truth has contributed to a 70% in the reduction of the costs associated to labeling in all the business cases it has been used. Also, note that this service is similar to the initial one provided by [Amazon Mechanical Turk](https://www.mturk.com/), which is an outsourcing crowdsourcing marketplace for different jobs and business processes. The whole functioning of the tool is as follows:
 
 ![SageMakerGround](./Images/Amazon-SageMaker-Ground-Truth.png)
 
-Also, note that this service is similar to the initial one provided by [Amazon Mechanical Turk](https://www.mturk.com/), which is an outsourcing crowdsourcing marketplace for different jobs and business processes.
+   **Main disadvantages related to Amazon SageMaker**
+   Amazon SageMaker has been released by the end of 2017, which makes it a relatively new service open to the market. Even though it has been graded with an average grade of 4.5 out of 5 by end users ([see more at [10]](https://www.g2.com/products/amazon-sagemaker/reviews), some disadvantages have been addressed as well, such as:
+   
+   * A less user-friendly interface for non-technical workers.
+   * It lacks enough documentation that is publicly available.
+   * Can result in expensive costs at the beginning due to usage of GPU instances to accelerate models trained.
+   * It is not still possible to schedule training jobs.
+   
+   **Main advantages related to Amazon SageMaker**
+   Overall advantages related to the product are summarized as:
+   * It signifincantly reduces time-to-market.
+   * It allows intuituive visualization for trained models.
+   * Easily scalable.
 
 #### 2.1.3. External marketplace solutions
 The [AWS Marketplace](https://aws.amazon.com/marketplace) puts together different external techonology products and services that can be integrated to the whole Amazon cloud computing ecosystem in the form of applications. Popular products in the marketplace are related to one of the following categories: operating systems, security, networking, storage, business intelligence, databases, DevOps and machine learning.
