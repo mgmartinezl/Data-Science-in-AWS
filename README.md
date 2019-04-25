@@ -174,9 +174,6 @@ The security on a data lake is very important because the data stored inside mig
 
 The solution uses an [Amazon Elasticsearch Service](https://aws.amazon.com/elasticsearch-service/) cluster to index data lake package data for searching. [See more at [4]](https://docs.aws.amazon.com/solutions/latest/data-lake-solution/appendix-b.html).
 
-
-
-
 ### 1.3. Analytics
 
 #### 1.3.1. Interactive analytics
@@ -256,7 +253,7 @@ Amazon provides different machine images where pre-installed EC2 instances can b
    **Main advantages related to Amazon SageMaker**  
    Overall advantages related to the product are summarized as:
    * It signifincantly reduces time-to-market.
-   * It allows intuituive visualization for trained models.
+   * It allows intuitive visualization for trained models.
    * Easily scalable.
 
 #### 2.1.3. External marketplace solutions
