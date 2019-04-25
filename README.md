@@ -320,9 +320,11 @@ Additional Amazon AI services also include document analysis ([Amazon Textract](
 
 ## AWS Enterprise Cloud Adoption
 
-![AWSAdoption](./Images/AWS-Adoption.png) [Taken from [6]](https://www.datamation.com/cloud-computing/aws-vs-azure-vs-google-cloud-comparison.html)
+
+![AWSAdoption](./Images/AWS-Adoption.png)  
+[Taken from [6]](https://www.datamation.com/cloud-computing/aws-vs-azure-vs-google-cloud-comparison.html)
 
 The graph above shows the adoption rates of the main cloud providers. Although it is difficult nowadays to get the specific figures for the adoption of Data Science services on the cloud we acknowledge that once a customer is on the cloud the tendency is to use the full stack of services on it.
 Therefore we can trust AWS is still the service with the highest number of apps Running on its cloud services.
 
-One case of study using Analytic services is [Formula One Group](https://aws.amazon.com/solutions/case-studies/formula-one/).
+One case of study using Amazon data science related services can be found here: [Formula One Group](https://aws.amazon.com/solutions/case-studies/formula-one/).
